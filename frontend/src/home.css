@@ -1297,6 +1297,7 @@ h1{
     color: white;
     font-size: 14px;
     margin-bottom: 12px;
+    text-decoration: none;
 }
 
 .footer-contact h4{
@@ -1422,6 +1423,10 @@ h1{
 /* MOBILE RESPONSIVE */
 
 @media (max-width: 900px) {
+    .ques-grid-card{
+        width: 90%;
+        margin-left: 10px;
+    }
     .left-nav{
         margin-left: -6px;
     }
@@ -1485,6 +1490,8 @@ h1{
     .mobile-menu button{
         background-color: rgb(0, 115, 255);
         padding: 12px 20px;
+        margin-right: 0px;
+        margin-left: -8px;
         border-radius: 10px;
         color: white;
         border: none;
@@ -1676,6 +1683,7 @@ h1{
     .glass-cards{
         flex-wrap: wrap;
         gap: 10px;
+
     }
 
     .third-grids{
@@ -1778,7 +1786,21 @@ h1{
     }
 }
 
+@media (max-width: 826px) {
+    .glass-cards{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+}
+
+
+
 @media (max-width: 480px) {
+    .glass-cards{
+        grid-template-columns: repeat(2, 1fr); /* 2 evenly-sized columns */
+        gap: 10px;
+    
+}
     .facility-visual{
         height: 300px;
     }
@@ -1819,5 +1841,24 @@ h1{
     .progress-dot.active,
     .progress-dot:hover{
         width: 24px;
+    }
+}
+
+@media (max-width: 840px){
+.glass-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: center;
+}}
+
+/* very small screens only: drop to 2 columns */
+@media (max-width: 480px) {
+    .glass-cards{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 }
