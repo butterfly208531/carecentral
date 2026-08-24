@@ -35,8 +35,8 @@ function Question(){
         <>
             <div className='ques'>
                 <hr />
-                <h3 style={{color: "rgb(29, 86, 126)"}}>FAQ</h3>
-                <div className='title'><h1>Frequently Asked <span style={{color: "rgb(48, 105, 171)"}}> Questions</span></h1></div>
+                <h3 style={{color: "#1a3d5c"}}>FAQ</h3>
+                <div className='title'><h1>Frequently Asked <span style={{color: "#3898D0"}}> Questions</span></h1></div>
                 <h3 style={{color: "rgb(35, 35, 35)"}}>Everything you need to know about CareCentral.</h3>
                 <div className="ques-grid">
                     {faqs.map((faq, index) => (

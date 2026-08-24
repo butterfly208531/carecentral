@@ -42,9 +42,22 @@ function Demo(){
                 body: JSON.stringify(formData),
             });
 
-            const data = await response.json();
+            let data = null;
+            const contentType = response.headers.get("content-type");
+            if (contentType && contentType.includes("application/json")) {
+                try {
+                    data = await response.json();
+                } catch {
+                    data = null;
+                }
+            }
 
-            if (!response.ok || !data.success) {
+            if (!response.ok) {
+                const message = (data && data.message) || `Request failed (${response.status} ${response.statusText || "Error"})`;
+                throw new Error(message);
+            }
+
+            if (data && !data.success) {
                 throw new Error(data.message || "Something went wrong. Please try again.");
             }
 
@@ -68,10 +81,10 @@ function Demo(){
         <>
             <div className="final">
             <div >
-            <hr style={{ color: "rgb(156, 212, 253)" }} />
-            <h3 style={{ color: "rgb(156, 212, 253)" }}>GET STARTED TODAY</h3>
-            <div className='title'><h1 
-                className="text" 
+            <hr style={{ color: "#7ec8ed" }} />
+            <h3 style={{ color: "#7ec8ed" }}>GET STARTED TODAY</h3>
+            <div className='title'><h1
+                className="text"
                 style={{ color: "rgb(224, 240, 255)", textAlign: "left", marginLeft: "40px" }}
             >
                 Ready to Modernize Your Healthcare Facility?
@@ -79,7 +92,7 @@ function Demo(){
             <h3 className="text" style={{ color: "rgb(224, 240, 255)" }}>
                 Schedule a personalized demo and see how CareCentral can transform patient care, streamline operations, and bring your facility into the digital era.
             </h3>
-                <div className="text">       
+                <div className="text">
                 <span>📞 +251 955935455</span>
                 <span>✉ beltechsolns@gmail.com</span>
                 <span>➤ @belTechSolns</span>
@@ -201,7 +214,7 @@ function Demo(){
                 {status === "submitting" ? "Submitting..." : "Submit Demo Request → "}
             </button>
         </form>
-                    </div> 
+                    </div>
         </>
     )
 }

@@ -7,8 +7,8 @@ function Price(){
     return (<>
     <div className='fifth-white'>
                     <hr />
-                    <h3 style={{color: "rgb(29, 86, 126)"}}>PRICING</h3>
-                    <div className='title'><h1>Simple, Transparent <span style={{color: "rgb(48, 105, 171)"}}> Pricing</span></h1></div>
+                    <h3 style={{color: "#1a3d5c"}}>PRICING</h3>
+                    <div className='title'><h1>Simple, Transparent <span style={{color: "#3898D0"}}> Pricing</span></h1></div>
                     <h3>Choose the plan that fits your facility. No hidden fees, no surprises.</h3>
 
                     <div className = "prices">

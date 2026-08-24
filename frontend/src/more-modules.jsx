@@ -650,7 +650,7 @@ function MoreModules() {
           <HashLink
             to="/#demos"
             className="button2"
-            style={{ color: "#2e7ed8", fontWeight: "500" }}
+            style={{ color: "#3898D0", fontWeight: "500" }}
           >
             Contact Sales →
           </HashLink>
