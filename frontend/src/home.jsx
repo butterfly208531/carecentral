@@ -120,6 +120,7 @@ function Home(){
         };
         const [menuOpen, setMenuOpen] = useState(false);
         const [activeTab, setActiveTab] = useState("Overview");
+        const [showAllFeatures, setShowAllFeatures] = useState(false);
         const tabs = [
             {label:"Overview", icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>},
             {label:"Laboratory", icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 3v7.2L4.7 18c-.8 1.4.2 3 1.8 3h11c1.6 0 2.6-1.6 1.8-3L15 10.2V3"/><line x1="9" y1="3" x2="15" y2="3"/><line x1="7.5" y1="14" x2="16.5" y2="14"/></svg>},
@@ -596,6 +597,7 @@ function Home(){
       </div>
     </div>
 
+    {showAllFeatures && (<>
     <div className='third-white-grid'>
       <div className='third-white-cards'>
         <div className="icon-square">
@@ -749,6 +751,14 @@ function Home(){
         <h3>Data Encryption</h3>
       </div>
     </div>
+    </>)}
+  </div>
+
+  <div className="features-toggle-wrap">
+    <button className="features-toggle-btn" onClick={() => setShowAllFeatures(!showAllFeatures)}>
+      {showAllFeatures ? "Show Less ▲" : "Show More Features ▼"}
+    </button>
+    {!showAllFeatures && <span className="features-toggle-hint">+15 more features</span>}
   </div>
 </div>
 
