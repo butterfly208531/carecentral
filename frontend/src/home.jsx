@@ -15,6 +15,112 @@ import icuImage from './assets/icu.jpg';
 import integrationImage from './assets/integration.jpg';
 import { Link } from "react-router-dom";
 
+const UNSPLASH = (id) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=600&q=80`;
+
+function FeatureCard({ feature }) {
+    return (
+        <div className='third-white-cards'>
+            <div className='card-image-wrap'>
+                <img className='card-image' src={feature.image} alt={feature.title} loading="lazy" />
+                <div className='icon-square'>{feature.icon}</div>
+            </div>
+            <h3>{feature.title}</h3>
+        </div>
+    );
+}
+
+const featureCards = [
+        {
+            title: "Electronic Medical Records",
+            image: UNSPLASH("photo-1454165804606-c3d57bc86b40"),
+            icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 2v3H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2V2z"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>)
+        },
+        {
+            title: "Patient Timeline",
+            image: UNSPLASH("photo-1519494026892-80bbd2d6fd0d"),
+            icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>)
+        },
+        {
+            title: "Appointment Scheduling",
+            image: UNSPLASH("photo-1506784983877-45594efa4cbe"),
+            icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>)
+        },
+        {
+            title: "Queue Management",
+            image: UNSPLASH("photo-1522071820081-009f0129c71c"),
+            icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>)
+        },
+        {
+            title: "Clinical Documentation",
+            image: UNSPLASH("photo-1434030216411-0b793f4b4173"),
+            icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M2 12h4l2-8 4 16 2-8h8"/></svg>)
+        },
+        {
+            title: "Laboratory Workflow",
+            image: UNSPLASH("photo-1532187863486-abf9dbad1b69"),
+            icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 2v6L4 20a1 1 0 0 0 1 2h14a1 1 0 0 0 1-2L15 8V2"/><line x1="9" y1="2" x2="15" y2="2"/></svg>)
+        },
+        {
+            title: "ICU Management",
+            image: UNSPLASH("photo-1516574187841-cb9cc2ca948b"),
+            icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="10" width="18" height="8" rx="1"/><path d="M6 10V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/></svg>)
+        },
+        {
+            title: "Role-Based Access",
+            image: UNSPLASH("photo-1563013544-824ae1b704d3"),
+            icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>)
+        },
+        {
+            title: "Audit Logs",
+            image: UNSPLASH("photo-1614064641938-3bbee52942c7"),
+            icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2a5 5 0 0 1 5 5c0 3-1 5-1 8a4 4 0 0 1-8 0c0-3-1-5-1-8a5 5 0 0 1 5-5z"/><line x1="9" y1="10" x2="15" y2="10"/></svg>)
+        },
+        {
+            title: "Multi-Branch Support",
+            image: UNSPLASH("photo-1451187580459-43490279c0fa"),
+            icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="13" x2="16" y2="13"/></svg>)
+        },
+        {
+            title: "Reporting & Analytics",
+            image: UNSPLASH("photo-1551288049-bebda4e38f71"),
+            icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="12" width="4" height="8"/><rect x="10" y="8" width="4" height="12"/><rect x="17" y="4" width="4" height="16"/></svg>)
+        },
+        {
+            title: "Responsive Design",
+            image: UNSPLASH("photo-1461749280684-dccba630e2f6"),
+            icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>)
+        },
+        {
+            title: "Cloud Deployment",
+            image: UNSPLASH("photo-1558494949-ef010cbdcc31"),
+            icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>)
+        },
+        {
+            title: "On Premise Deployment",
+            image: UNSPLASH("photo-1544197150-b99a580bb7a8"),
+            icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>)
+        },
+        {
+            title: "Machine Integration Ready",
+            image: UNSPLASH("photo-1485827404703-89b55fcc595e"),
+            icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M8 12l3 3 6-6"/></svg>)
+        },
+        {
+            title: "Barcode Support",
+            image: UNSPLASH("photo-1636622433525-127afdf3662d"),
+            icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>)
+        },
+        {
+            title: "Future AI Ready",
+            image: UNSPLASH("photo-1677442136019-21780ecad995"),
+            icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2a10 10 0 0 1 10 10c0 5-3 9-7 9l-3-6-3 6c-4 0-7-4-7-9A10 10 0 0 1 12 2z"/><path d="M9 12l2 2 4-4"/></svg>)
+        },
+        {
+            title: "Data Encryption",
+            image: UNSPLASH("photo-1550751827-4bd374c3f58b"),
+            icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/></svg>)
+        }
+];
 
 function Home(){
         const facilityCards = [
@@ -564,194 +670,23 @@ function Home(){
 
   <div className="third-grids">
     <div className='third-white-grid'>
-      <div className='third-white-cards'>
-        <div className="icon-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M9 2v3H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2V2z"/>
-            <line x1="9" y1="12" x2="15" y2="12"/>
-            <line x1="9" y1="16" x2="13" y2="16"/>
-          </svg>
-        </div>
-        <h3>Electronic Medical Records</h3>
-      </div>
-      <div className='third-white-cards'>
-        <div className="icon-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-            <circle cx="9" cy="7" r="4"/>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
-        </div>
-        <h3>Patient Timeline</h3>
-      </div>
-      <div className='third-white-cards'>
-        <div className="icon-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <rect x="3" y="4" width="18" height="18" rx="2"/>
-            <line x1="16" y1="2" x2="16" y2="6"/>
-            <line x1="8" y1="2" x2="8" y2="6"/>
-            <line x1="3" y1="10" x2="21" y2="10"/>
-          </svg>
-        </div>
-        <h3>Appointment Scheduling</h3>
-      </div>
+      {featureCards.slice(0, 3).map((f) => (
+        <FeatureCard key={f.title} feature={f} />
+      ))}
     </div>
+    {showAllFeatures && [3, 6, 9, 12, 15].map((start) => (
+      <div className='third-white-grid' key={start}>
+        {featureCards.slice(start, start + 3).map((f) => (
+          <FeatureCard key={f.title} feature={f} />
+        ))}
+      </div>
+    ))}
 
-    {showAllFeatures && (<>
-    <div className='third-white-grid'>
-      <div className='third-white-cards'>
-        <div className="icon-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-          </svg>
-        </div>
-        <h3>Queue Management</h3>
-      </div>
-      <div className='third-white-cards'>
-        <div className="icon-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M2 12h4l2-8 4 16 2-8h8"/>
-          </svg>
-        </div>
-        <h3>Clinical Documentation</h3>
-      </div>
-      <div className='third-white-cards'>
-        <div className="icon-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M9 2v6L4 20a1 1 0 0 0 1 2h14a1 1 0 0 0 1-2L15 8V2"/>
-            <line x1="9" y1="2" x2="15" y2="2"/>
-          </svg>
-        </div>
-        <h3>Laboratory Workflow</h3>
-      </div>
-    </div>
 
-    <div className='third-white-grid'>
-      <div className='third-white-cards'>
-        <div className="icon-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <rect x="3" y="10" width="18" height="8" rx="1"/>
-            <path d="M6 10V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/>
-          </svg>
-        </div>
-        <h3>ICU Management</h3>
-      </div>
-      <div className='third-white-cards'>
-        <div className="icon-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <rect x="3" y="11" width="18" height="10" rx="2"/>
-            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-          </svg>
-        </div>
-        <h3>Role-Based Access</h3>
-      </div>
-      <div className='third-white-cards'>
-        <div className="icon-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M12 2a5 5 0 0 1 5 5c0 3-1 5-1 8a4 4 0 0 1-8 0c0-3-1-5-1-8a5 5 0 0 1 5-5z"/>
-            <line x1="9" y1="10" x2="15" y2="10"/>
-          </svg>
-        </div>
-        <h3>Audit Logs</h3>
-      </div>
-    </div>
 
-    <div className='third-white-grid'>
-      <div className='third-white-cards'>
-        <div className="icon-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <rect x="4" y="2" width="16" height="20" rx="2"/>
-            <line x1="8" y1="8" x2="16" y2="8"/>
-            <line x1="8" y1="13" x2="16" y2="13"/>
-          </svg>
-        </div>
-        <h3>Multi-Branch Support</h3>
-      </div>
-      <div className='third-white-cards'>
-        <div className="icon-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <rect x="3" y="12" width="4" height="8"/>
-            <rect x="10" y="8" width="4" height="12"/>
-            <rect x="17" y="4" width="4" height="16"/>
-          </svg>
-        </div>
-        <h3>Reporting & Analytics</h3>
-      </div>
-      <div className='third-white-cards'>
-        <div className="icon-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <rect x="7" y="2" width="10" height="20" rx="2"/>
-            <line x1="11" y1="18" x2="13" y2="18"/>
-          </svg>
-        </div>
-        <h3>Responsive Design</h3>
-      </div>
-    </div>
 
-    <div className='third-white-grid'>
-      <div className='third-white-cards'>
-        <div className="icon-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-            <path d="M2 17l10 5 10-5"/>
-            <path d="M2 12l10 5 10-5"/>
-          </svg>
-        </div>
-        <h3>Cloud Deployment</h3>
-      </div>
-      <div className='third-white-cards'>
-        <div className="icon-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <rect x="2" y="3" width="20" height="14" rx="2"/>
-            <line x1="8" y1="21" x2="16" y2="21"/>
-            <line x1="12" y1="17" x2="12" y2="21"/>
-          </svg>
-        </div>
-        <h3>On Premise Deployment</h3>
-      </div>
-      <div className='third-white-cards'>
-        <div className="icon-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <rect x="2" y="2" width="20" height="20" rx="2"/>
-            <path d="M8 12l3 3 6-6"/>
-          </svg>
-        </div>
-        <h3>Machine Integration Ready</h3>
-      </div>
-    </div>
 
-    <div className='third-white-grid'>
-      <div className='third-white-cards'>
-        <div className="icon-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <rect x="2" y="4" width="20" height="16" rx="2"/>
-            <line x1="8" y1="10" x2="16" y2="10"/>
-            <line x1="8" y1="14" x2="12" y2="14"/>
-          </svg>
-        </div>
-        <h3>Barcode Support</h3>
-      </div>
-      <div className='third-white-cards'>
-        <div className="icon-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M12 2a10 10 0 0 1 10 10c0 5-3 9-7 9l-3-6-3 6c-4 0-7-4-7-9A10 10 0 0 1 12 2z"/>
-            <path d="M9 12l2 2 4-4"/>
-          </svg>
-        </div>
-        <h3>Future AI Ready</h3>
-      </div>
-      <div className='third-white-cards'>
-        <div className="icon-square">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <rect x="3" y="11" width="18" height="11" rx="2"/>
-            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-            <circle cx="12" cy="16" r="1"/>
-          </svg>
-        </div>
-        <h3>Data Encryption</h3>
-      </div>
-    </div>
-    </>)}
+
   </div>
 
   <div className="features-toggle-wrap">
