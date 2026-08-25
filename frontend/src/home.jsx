@@ -17,6 +17,244 @@ import { Link } from "react-router-dom";
 
 const UNSPLASH = (id) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=600&q=80`;
 
+const specialtyModules = [
+    { label: "Radiology", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8M12 18v2"/></svg>) },
+    { label: "Ophthalmology", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>) },
+    { label: "Physiotherapy", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>) },
+    { label: "Gynecology", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="8" r="5"/><path d="M12 13v8M9 18h6"/></svg>) },
+    { label: "Emergency", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="8" r="5"/><line x1="12" y1="16" x2="12" y2="22"/><line x1="9" y1="19" x2="15" y2="19"/></svg>) },
+    { label: "Inventory", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/></svg>) },
+    { label: "Finance", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>) },
+    { label: "HR & Payroll", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>) },
+    { label: "Dental", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 3c-2 3-2 4-4 4a3 3 0 0 0-3 3c0 5 3 9 5 11 1-2 1-3 2-3s1 1 2 3c2-2 5-6 5-11a3 3 0 0 0-3-3c-2 0-2-1-4-4z"/></svg>) },
+    { label: "Pharmacy", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="8" width="18" height="8" rx="4"/><line x1="12" y1="8" x2="12" y2="16"/></svg>) },
+    { label: "ENT", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 8a6 6 0 0 1 12 0c0 4-3 5-3 9a3 3 0 0 1-6 0"/></svg>) },
+    { label: "IPD", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="10" width="18" height="8" rx="1"/><path d="M6 10V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/></svg>) },
+    { label: "Surgery", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 4L4 20M9 4l11 11"/></svg>) },
+    { label: "Attendance", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>) },
+    { label: "More...", icon: null },
+];
+
+const integrationNodes = [
+    { label: "Accounting", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>) },
+    { label: "Inventory", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/></svg>) },
+    { label: "Purchase", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 16V8l-9-5-9 5v8l9 5 9-5z"/><path d="M3.3 7l8.7 5 8.7-5"/><line x1="12" y1="22" x2="12" y2="12"/></svg>) },
+    { label: "HR & Payroll", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>) },
+    { label: "Attendance", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>) },
+    { label: "CRM", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="9" cy="8" r="3"/><path d="M2 20a7 7 0 0 1 14 0"/><circle cx="18" cy="9" r="2.5"/><path d="M16 20a6 6 0 0 1 7-5.9"/></svg>) },
+    { label: "Dashboard & Reporting", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="12" width="4" height="8"/><rect x="10" y="8" width="4" height="12"/><rect x="17" y="4" width="4" height="16"/></svg>) },
+    { label: "Medical Devices", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.6V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.6 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.6 1z"/></svg>) },
+    { label: "Laboratory Machines", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 2v6L4 20a1 1 0 0 0 1 2h14a1 1 0 0 0 1-2L15 8V2"/><line x1="9" y1="2" x2="15" y2="2"/></svg>) },
+    { label: "Radiology Equipment", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="13" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>) },
+    { label: "Sales", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg>) },
+    { label: "Speciality Modules", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="4" y1="9" x2="10" y2="9"/><line x1="14" y1="15" x2="20" y2="15"/><circle cx="12" cy="9" r="2"/><circle cx="12" cy="15" r="2"/></svg>) },
+];
+
+const advantageItems = [
+    { title: "Built on Odoo", text: "Enterprise-grade foundation trusted by thousands globally.", color: "#3898D0", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>) },
+    { title: "Affordable", text: "Transparent pricing with no hidden fees.", color: "#1a3d5c", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.5c0-1-1.3-1.8-3-1.8s-3 .8-3 2 1.3 1.6 3 1.8 3 .8 3 2-1.3 2-3 2-3-.8-3-1.8"/></svg>) },
+    { title: "Easy to Expand", text: "Add modules anytime without migration headaches.", color: "#3898D0", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.6V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.6 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.6 1z"/></svg>) },
+    { title: "Local Implementation", text: "On-site or remote setup across Ethiopia.", color: "#1a3d5c", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>) },
+    { title: "Modular Design", text: "Start small, expand as your facility grows.", color: "#3898D0", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>) },
+    { title: "Healthcare Focused", text: "Built specifically for the African healthcare context.", color: "#1a3d5c", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>) },
+    { title: "Dedicated Support", text: "Local implementation and training by expert team.", color: "#3898D0", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>) },
+    { title: "Secure & Reliable", text: "Your patient data protected at every layer.", color: "#1a3d5c", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="9"/><polyline points="8 12 11 15 16 9"/></svg>) },
+];
+
+/* Speeds are in degrees per second */
+const SPIN_BASE_SPEED = 9;   /* gentle idle spin of the wheel */
+const SPIN_MAX_SPEED = 720;  /* clamp for flick inertia */
+
+function SpecialtyWheel({ items }) {
+    const rootRef = useRef(null);
+    const rotationRef = useRef(0);
+    const velocityRef = useRef(SPIN_BASE_SPEED);
+    const draggingRef = useRef(false);
+    const hoveringRef = useRef(false);
+    const samplesRef = useRef([]);
+    const tweenRef = useRef(null);
+    const reducedMotionRef = useRef(false);
+    const [dragging, setDragging] = useState(false);
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const step = 360 / items.length;
+    const baseSpeed = () => (reducedMotionRef.current ? 0 : SPIN_BASE_SPEED);
+
+    useEffect(() => {
+        reducedMotionRef.current = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        velocityRef.current = baseSpeed();
+    }, []);
+
+    useEffect(() => {
+        let raf;
+        let last = performance.now();
+
+        const tick = (now) => {
+            const dt = Math.min((now - last) / 1000, 0.05);
+            last = now;
+
+            const tween = tweenRef.current;
+            if (tween) {
+                /* arrow-button spin: eased one-step rotation */
+                const progress = Math.min((now - tween.start) / tween.duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                rotationRef.current = tween.from + (tween.to - tween.from) * eased;
+                if (progress >= 1) {
+                    rotationRef.current = tween.to;
+                    tweenRef.current = null;
+                    velocityRef.current = baseSpeed();
+                }
+            } else if (!draggingRef.current && !hoveringRef.current) {
+                /* flick inertia easing back down to the idle spin baseline */
+                const base = baseSpeed();
+                const v = velocityRef.current;
+                if (Math.abs(v) > Math.abs(base)) {
+                    const decayed = v * Math.pow(0.08, dt);
+                    velocityRef.current = Math.abs(decayed) > Math.abs(base) ? decayed : base;
+                } else {
+                    velocityRef.current = base;
+                }
+                rotationRef.current += velocityRef.current * dt;
+            }
+
+            /* single DOM write per frame — every slot follows via inherited --spin var */
+            const rot = ((rotationRef.current % 360) + 360) % 360;
+            if (rootRef.current) rootRef.current.style.setProperty("--spin", `${rot}deg`);
+
+            /* highlight whichever module currently sits at the top of the wheel */
+            let best = 0;
+            let bestDist = Infinity;
+            items.forEach((_, i) => {
+                const a = (((i * step + rot) % 360) + 360) % 360;
+                const d = Math.min(a, 360 - a);
+                if (d < bestDist) { bestDist = d; best = i; }
+            });
+            setActiveIndex((prev) => (prev === best ? prev : best));
+
+            raf = requestAnimationFrame(tick);
+        };
+
+        raf = requestAnimationFrame(tick);
+        return () => cancelAnimationFrame(raf);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [items]);
+
+    const pointerAngle = (e) => {
+        const rect = rootRef.current.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.bottom; /* wheel centre = bottom middle of the visible half circle */
+        const deg = (Math.atan2(e.clientY - cy, e.clientX - cx) * 180) / Math.PI + 90;
+        return ((deg % 360) + 360) % 360;
+    };
+
+    const onPointerDown = (e) => {
+        draggingRef.current = true;
+        setDragging(true);
+        tweenRef.current = null;
+        samplesRef.current = [{ t: performance.now(), a: pointerAngle(e) }];
+        e.currentTarget.setPointerCapture?.(e.pointerId);
+    };
+
+    const onPointerMove = (e) => {
+        if (!draggingRef.current) return;
+        const a = pointerAngle(e);
+        const samples = samplesRef.current;
+        const prev = samples[samples.length - 1];
+        if (prev) {
+            let d = a - prev.a;
+            d = ((d + 540) % 360) - 180; /* shortest wrap-around delta */
+            rotationRef.current += d;
+        }
+        samples.push({ t: performance.now(), a });
+        while (samples.length > 2 && performance.now() - samples[0].t > 120) samples.shift();
+    };
+
+    const endDrag = () => {
+        if (!draggingRef.current) return;
+        draggingRef.current = false;
+        setDragging(false);
+        const samples = samplesRef.current;
+        const first = samples[0];
+        const lastSample = samples[samples.length - 1];
+        let v = baseSpeed();
+        if (first && lastSample && lastSample.t > first.t) {
+            let d = lastSample.a - first.a;
+            d = ((d + 540) % 360) - 180;
+            const measured = (d / (lastSample.t - first.t)) * 1000;
+            if (Math.abs(measured) > 40) {
+                v = Math.max(-SPIN_MAX_SPEED, Math.min(SPIN_MAX_SPEED, measured));
+            }
+        }
+        velocityRef.current = v;
+    };
+
+    const spinBy = (direction) => {
+        tweenRef.current = {
+            from: rotationRef.current,
+            to: rotationRef.current + direction * step,
+            start: performance.now(),
+            duration: reducedMotionRef.current ? 1 : 450,
+        };
+    };
+
+    return (
+        <>
+            <div
+                className={`specialty-wheel${dragging ? " dragging" : ""}`}
+                ref={rootRef}
+                role="region"
+                aria-label="Specialty modules spinning wheel"
+                onPointerDown={onPointerDown}
+                onPointerMove={onPointerMove}
+                onPointerUp={endDrag}
+                onPointerCancel={endDrag}
+                onMouseEnter={() => { hoveringRef.current = true; }}
+                onMouseLeave={() => { hoveringRef.current = false; }}
+            >
+                <div className="wheel-ring" aria-hidden="true"></div>
+
+                <div className="wheel-items">
+                    {items.map((item, i) => (
+                        <div
+                            key={item.label}
+                            className="wheel-slot"
+                            style={{ "--a": `${i * step}deg` }}
+                        >
+                            <div className={`glass wheel-pill${i === activeIndex ? " active" : ""}`}>
+                                <h3>{item.icon}{item.label}</h3>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <button
+                    type="button"
+                    className="wheel-arrow left"
+                    aria-label="Spin the wheel backward"
+                    onPointerDown={(e) => e.stopPropagation()}
+                    onClick={() => spinBy(-1)}
+                >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <button
+                    type="button"
+                    className="wheel-arrow right"
+                    aria-label="Spin the wheel forward"
+                    onPointerDown={(e) => e.stopPropagation()}
+                    onClick={() => spinBy(1)}
+                >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+
+                <div className="wheel-hub" aria-hidden="true">
+                    <span className="wheel-hub-text">SPECIALITY<br />MODULES</span>
+                </div>
+            </div>
+            <p className="wheel-hint">Add specialty modules as your facility's clinical scope grows.</p>
+        </>
+    );
+}
+
 function FeatureCard({ feature }) {
     return (
         <div className='third-white-cards'>
@@ -225,6 +463,28 @@ function Home(){
         section.scrollIntoView({ behavior: "smooth" });
         };
         const [menuOpen, setMenuOpen] = useState(false);
+
+        const spiderRef = useRef(null);
+        const [spiderInView, setSpiderInView] = useState(false);
+
+        useEffect(() => {
+            const el = spiderRef.current;
+            if (!el) return;
+            const reveal = () => setSpiderInView(true);
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting){
+                        reveal();
+                        observer.disconnect();
+                        clearTimeout(timer);
+                    }
+                },
+                { threshold: 0.25 }
+            );
+            observer.observe(el);
+            const timer = setTimeout(reveal, 2500); /* fallback: never leave pills hidden */
+            return () => { observer.disconnect(); clearTimeout(timer); };
+        }, []);
         const [activeTab, setActiveTab] = useState("Overview");
         const [showAllFeatures, setShowAllFeatures] = useState(false);
         const tabs = [
@@ -280,27 +540,27 @@ function Home(){
             </div>
 
             <div className = "hero">
-                <div className = "made-for-eth"><span>Enterprise EMR + ERP. Made for Ethiopia</span></div>
-                <a style={{fontSize: "60px", fontWeight: "bold"}}>Healthcare </a> <a style={{fontSize: "60px", fontWeight: "bold", color: "#ffffff"}}>Management Made</a><h1 style={{fontSize: "60px", fontWeight: "bold", color: "white", marginBottom: "60px"}}>Simple.</h1>
-                <h3>CareCentral is a modern Healthcare ERP built on Odoo that
+                <div className = "made-for-eth reveal reveal-zoom"><span>Enterprise EMR + ERP. Made for Ethiopia</span></div>
+                <a className="reveal" style={{fontSize: "60px", fontWeight: "bold"}}>Healthcare </a> <a className="reveal" style={{fontSize: "60px", fontWeight: "bold", color: "#ffffff"}}>Management Made</a><h1 className="reveal" style={{fontSize: "60px", fontWeight: "bold", color: "white", marginBottom: "60px"}}>Simple.</h1>
+                <h3 className="reveal">CareCentral is a modern Healthcare ERP built on Odoo that
                     <br/>helps clinics and hospitals streamline patient care,
                     <br/>operations, finance, and administration from one centralized 
                     <br/>platform.</h3>
                 
-                <div className = "two-buttons">
+                <div className = "two-buttons reveal">
                 <button className = "request-button" onClick={scrollToDemo}> Request a Demo → </button>
                 <button className="explore-button" onClick={scrollToFeatures}>
                     ▶ Explore Features
                 </button>                </div>
 
-                <div className='the-3'> 
+                <div className='the-3 reveal'> 
                     <span>✓ Modularized</span>
                     <span>✓ Multi-Branch</span>
                     <span>✓ Cloud & On-Premise</span>
                 </div>
 
                 <div className="box">
-                <div className="dashboard">
+                <div className="dashboard reveal reveal-zoom reveal-delay-4">
                     <div className="dashboard-header">
                         <div className="win-dots">
                             <span className="dot red"></span>
@@ -465,7 +725,7 @@ function Home(){
 
             <div className='white'>
             <div className = "second-grid">
-                <div className='second'>
+                <div className='second reveal reveal-stagger'>
             <div>
                 <div className="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
                 <h2>Healthcare ERP</h2>
@@ -482,7 +742,7 @@ function Home(){
                 <h3 style={{marginRight:"20px"}}>Ready</h3>
             </div>
             </div>
-            <div className='second'>
+            <div className='second reveal reveal-stagger'>
                 <div>
                     <div className="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 10a5 5 0 0 0-9.6-1.8A4 4 0 0 0 6 16h12a4 4 0 0 0 0-8z"/></svg></div>
                     <h2>Cloud & On-Premise</h2>
@@ -505,16 +765,15 @@ function Home(){
 
             <div className = "gray" id="about">
                 <hr/>
-                <h3 style={{color: "#1a3d5c"}}>Why CareCentral</h3>
-                <div className="title"><h1>Built for Modern<span style={{color: "#3898d0"}}> Healthcare</span></h1></div>
-                <h3>A platform designed from the ground up for clinics, hospitals, and multi-branch <br/> healthcare networks in Ethiopia.</h3>
+                <h3 className="reveal" style={{color: "#1a3d5c"}}>Why CareCentral</h3>
+                <div className="title reveal reveal-delay-1"><h1>Built for Modern<span style={{color: "#3898d0"}}> Healthcare</span></h1></div>
+                <h3 className="reveal reveal-delay-2">A platform designed from the ground up for clinics, hospitals, and multi-branch <br/> healthcare networks in Ethiopia.</h3>
 
-                <div className='cards-column'>
-                <div>
+                <div className='cards-column reveal reveal-stagger'>
                 <div className='card'>
                 <div className="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 2v3H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2V2z"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg></div>
                 <h2>Modern EMR</h2>
-                <h3>Electronic Medical Records designed for clinical <br/> efficiency and accuracy.</h3>
+                <h3>Electronic Medical Records designed for clinical efficiency and accuracy.</h3>
             </div>
             <div className='card'>
                 <div className="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 10a5 5 0 0 0-9.6-1.8A4 4 0 0 0 6 16h12a4 4 0 0 0 0-8z"/></svg></div>
@@ -524,48 +783,43 @@ function Home(){
             <div className='card'>
                 <div className="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
                 <h2>Scalable</h2>
-                <h3>Grows with your facility from single clinic to hospital <br/> network.</h3>
+                <h3>Grows with your facility from single clinic to hospital network.</h3>
             </div>
             <div className='card'>
                 <div className="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.6V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.6 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.6 1z"/></svg></div>
                 <h2>Easy to Use</h2>
                 <h3>Intuitive UI designed for clinical staff, not just IT teams.</h3>
             </div>
-                    </div>
-
-
-                <div>
                   <div className='card'>
                     <div className="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="13" x2="16" y2="13"/></svg></div>
                     <h2>Hospital ERP</h2>
-                    <h3>Full enterprise resource planning tailored for healthcare <br/> operations.</h3>
+                    <h3>Full enterprise resource planning tailored for healthcare operations.</h3>
                 </div>
                 <div className='card'>
                     <div className="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
                     <h2>On-Premise Ready</h2>
-                    <h3>Deploy within your own infrastructure for full data <br/> control.</h3>
+                    <h3>Deploy within your own infrastructure for full data control.</h3>
                 </div>
                 <div className='card'>
                     <div className="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
                     <h2>Secure</h2>
-                    <h3>Role-based access, audit logs, and enterprise-grade <br/> security.</h3>
+                    <h3>Role-based access, audit logs, and enterprise-grade security.</h3>
                 </div>
                 <div className='card'>
                     <div className="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="13 2 3 14 11 14 9 22 21 10 13 10 13 2"/></svg></div>
                     <h2>Highly Customizable</h2>
-                    <h3>Adapt modules and workflows to your facility's unique <br/>needs.</h3>
+                    <h3>Adapt modules and workflows to your facility's unique needs.</h3>
                 </div>
-                    </div>
                 </div>
             </div>
 
             <div className='fourth'>
                 <hr/>
-                <h3 style = {{color: "#1a3d5c"}}>Core Modules</h3>
-                <div className='title'><h1 >Everything Your <span style={{color: "#3898d0"}}>Facility Needs</span></h1></div>
-                <h3 style = {{color: "gray"}}>Integrated clinical workflows that cover every touchpoint — from the front desk to the <br/>ICU.</h3>
+                <h3 className="reveal" style = {{color: "#1a3d5c"}}>Core Modules</h3>
+                <div className='title reveal reveal-delay-1'><h1 >Everything Your <span style={{color: "#3898d0"}}>Facility Needs</span></h1></div>
+                <h3 className="reveal reveal-delay-2" style = {{color: "gray"}}>Integrated clinical workflows that cover every touchpoint — from the front desk to the <br/>ICU.</h3>
 
-                <div className="facility-carousel" role="region" aria-label="Everything your facility needs modules">
+                <div className="facility-carousel reveal" role="region" aria-label="Everything your facility needs modules">
                     <div className="facility-carousel-track" ref={facilityTrackRef}>
                         {facilityCards.map((facility, index) => (
                             <div
@@ -631,51 +885,27 @@ function Home(){
 
             <div className = "second-blue">
                 <hr />
-                <h3 style={{color: "#7ec8ed"}}>SPECIALITY MODULES</h3>
-                <div className='title'><h1>Expand to Any <span style={{color: "#3898d0"}}></span>Specialty</h1></div>
-                <h3>Add specialty modules as your facility's clinical scope grows.</h3>
+                <div className='title reveal'><h1>Expand to Any <span style={{color: "#3898d0"}}></span>Specialty</h1></div>
 
-                <div className="glass-cards">
-                    <div className='glass'><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 3c-2 3-2 4-4 4a3 3 0 0 0-3 3c0 5 3 9 5 11 1-2 1-3 2-3s1 1 2 3c2-2 5-6 5-11a3 3 0 0 0-3-3c-2 0-2-1-4-4z"/></svg>Dental</h3></div>
-                    <div className = 'glass'><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8M12 18v2"/></svg>Radiology</h3></div>
-                    <div className = 'glass'><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="8" width="18" height="8" rx="4"/><line x1="12" y1="8" x2="12" y2="16"/></svg>Pharmacy</h3></div>
-                    <div className = 'glass'><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Physiotherapy</h3></div>
-                    <div className = 'glass'><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 8a6 6 0 0 1 12 0c0 4-3 5-3 9a3 3 0 0 1-6 0"/></svg>ENT</h3></div>
-                    <div className = 'glass'><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>Ophthalmology</h3></div>
-                </div>
-
-                <div className="glass-cards">
-                    <div className='glass'><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="8" r="5"/><path d="M12 13v8M9 18h6"/></svg>Gynecology</h3></div>
-                    <div className = 'glass'><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="8" r="5"/><line x1="12" y1="16" x2="12" y2="22"/><line x1="9" y1="19" x2="15" y2="19"/></svg>Emergency</h3></div>
-                    <div className = 'glass'><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="10" width="18" height="8" rx="1"/><path d="M6 10V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/></svg>IPD</h3></div>
-                    <div className = 'glass'><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 4L4 20M9 4l11 11"/></svg>Surgery</h3></div>
-                    <div className = 'glass'><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/></svg>Inventory</h3></div>
-                    <div className = 'glass'><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>Finance</h3></div>
-                </div>
-
-                <div className="glass-cards">
-                    <div className='glass'><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>HR & Payroll</h3></div>
-                    <div className = 'glass'><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>Attendance</h3></div>
-                    <div className = 'glass'><h3>More...</h3></div>
-                </div>
+                <SpecialtyWheel items={specialtyModules} />
             </div>
 
            <div className="third-white" id="features">
   <hr />
-  <h3 style={{ color: "#1a3d5c" }}>Platform Features</h3>
-  <div className='title'>
+  <h3 className="reveal" style={{ color: "#1a3d5c" }}>Platform Features</h3>
+  <div className='title reveal reveal-delay-1'>
     <h1>Engineered for Healthcare <span style={{ color: "#3898d0" }}>Excellence</span></h1>
   </div>
-  <h3>Every feature built with clinical workflow, compliance, and usability in mind.</h3>
+  <h3 className="reveal reveal-delay-2">Every feature built with clinical workflow, compliance, and usability in mind.</h3>
 
   <div className="third-grids">
-    <div className='third-white-grid'>
+    <div className='third-white-grid reveal reveal-stagger'>
       {featureCards.slice(0, 3).map((f) => (
         <FeatureCard key={f.title} feature={f} />
       ))}
     </div>
     {showAllFeatures && [3, 6, 9, 12, 15].map((start) => (
-      <div className='third-white-grid' key={start}>
+      <div className='third-white-grid reveal reveal-stagger' key={start}>
         {featureCards.slice(start, start + 3).map((f) => (
           <FeatureCard key={f.title} feature={f} />
         ))}
@@ -699,121 +929,69 @@ function Home(){
 
             <div className="second-gray">
                  <hr />
-                <h3 style={{color: "#1a3d5c"}}>Integrations</h3>
-                <div className='title'><h1>Connected to Everything<span style={{color: "#3898d0"}}> You Need</span> </h1></div>
-                <h3>Seamlessly integrated with business operations, medical devices, and future health standards.</h3>
+                <h3 className="reveal" style={{color: "#1a3d5c"}}>Integrations</h3>
+                <div className='title reveal reveal-delay-1'><h1>Connected to Everything<span style={{color: "#3898d0"}}> You Need</span> </h1></div>
+                <h3 className="reveal reveal-delay-2">Seamlessly integrated with business operations, medical devices, and future health standards.</h3>
 
-            <div className='second-gray-grid'>
-                <div className='second-gray-cards'>
-                    <div className="icon-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg></div>
-                    <h3>Accounting</h3>
+            <div
+                className={`spider-map${spiderInView ? " in-view" : ""}`}
+                ref={spiderRef}
+                role="list"
+                aria-label="CareCentral integrations"
+            >
+                <div className="spider-center">
+                    <img src={logoOnly} alt="" />
+                    <span>CareCentral</span>
                 </div>
-                <div className='second-gray-cards'>
-                    <div className="icon-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/></svg></div>
-                    <h3>Inventory</h3>
-                </div>
-                <div className='second-gray-cards'>
-                    <div className="icon-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 16V8l-9-5-9 5v8l9 5 9-5z"/><path d="M3.3 7l8.7 5 8.7-5"/><line x1="12" y1="22" x2="12" y2="12"/></svg></div>
-                    <h3>Purchase</h3>
-                </div>
+                {integrationNodes.map((node, i) => (
+                    <div
+                        key={node.label}
+                        className="spider-node"
+                        style={{ "--a": `${i * 30 - 90}deg`, "--d": `${i * 70}ms` }}
+                        role="listitem"
+                    >
+                        <span className="spider-line" aria-hidden="true"></span>
+                        <div className="spider-pill">{node.icon}<h3>{node.label}</h3></div>
+                    </div>
+                ))}
             </div>
-            <div className='second-gray-grid'>
-                <div className='second-gray-cards'>
-                    <div className="icon-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-                    <h3>HR & Payroll</h3>
-                </div>
-                <div className='second-gray-cards'>
-                    <div className="icon-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></div>
-                    <h3>Attendance</h3>
-                </div>
-                <div className='second-gray-cards'>
-                    <div className="icon-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="9" cy="8" r="3"/><path d="M2 20a7 7 0 0 1 14 0"/><circle cx="18" cy="9" r="2.5"/><path d="M16 20a6 6 0 0 1 7-5.9"/></svg></div>
-                    <h3>CRM</h3>
-                </div>
-            </div>
-            <div className='second-gray-grid'>
-                <div className='second-gray-cards'>
-                    <div className="icon-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="12" width="4" height="8"/><rect x="10" y="8" width="4" height="12"/><rect x="17" y="4" width="4" height="16"/></svg></div>
-                    <h3>Dashboard & Reporting</h3>
-                </div>
-                <div className='second-gray-cards'>
-                    <div className="icon-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.6V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.6 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.6 1z"/></svg></div>
-                    <h3>Medical Devices</h3>
-                </div>
-                <div className='second-gray-cards'>
-                    <div className="icon-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 2v6L4 20a1 1 0 0 0 1 2h14a1 1 0 0 0 1-2L15 8V2"/><line x1="9" y1="2" x2="15" y2="2"/></svg></div>
-                    <h3>Laboratory Machines</h3>
-                </div>
-            </div>
-            <div className='second-gray-grid'>
-                <div className='second-gray-cards'>
-                    <div className="icon-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="13" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-                    <h3>Radiology Equipment</h3>
-                </div>
-                <div className='second-gray-cards'>
-                    <div className="icon-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="9" cy="8" r="3"/><path d="M2 20a7 7 0 0 1 14 0"/><circle cx="18" cy="9" r="2.5"/><path d="M16 20a6 6 0 0 1 7-5.9"/></svg></div>
-                    <h3>Sales</h3>
-                </div>
-                <div className='second-gray-cards'>
-                    <div className="icon-square"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="4" y1="9" x2="10" y2="9"/><line x1="14" y1="15" x2="20" y2="15"/><circle cx="12" cy="9" r="2"/><circle cx="12" cy="15" r="2"/></svg></div>
-                    <h3>Speciality Modules</h3>
-                </div>
-            </div>
+
                 </div>
 
                                 <div className='advantages'>
                 <hr />
-                <h3 style={{color: "#1a3d5c"}}>Why Choose Us</h3>
-                <div className='title'><h1>The CareCentral<span style={{color: "#3898d0"}}> Advantage</span></h1></div>
-                <h3 style={{color: "gray"}}>We are not just software — we are your long-term healthcare technology partner.</h3>
+                <div className='title reveal'><h1>The CareCentral<span style={{color: "#3898d0"}}> Advantage</span></h1></div>
+                <h3 className="reveal" style={{color: "gray"}}>We are not just software — we are your long-term healthcare technology partner.</h3>
 
 
-            <div className='cards-column'>
-            <div>
-                <div className='card'>
-                    <div className="icon-circle-blue"><svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-                    <h2>Built on Odoo</h2>
-                    <h3>Enterprise-grade foundation trusted by thousands<br/>globally.</h3>
+            <div className="adv-spine">
+                <div className="adv-col left reveal reveal-stagger">
+                    {advantageItems.slice(0, 4).map((item) => (
+                        <div className="adv-block" key={item.title} style={{ "--c": item.color }}>
+                            <div className="adv-icon">{item.icon}</div>
+                            <div className="adv-body">
+                                <h2>{item.title}</h2>
+                                <h3>{item.text}</h3>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-                <div className='card'>
-                    <div className="icon-circle-blue"><svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.5c0-1-1.3-1.8-3-1.8s-3 .8-3 2 1.3 1.6 3 1.8 3 .8 3 2-1.3 2-3 2-3-.8-3-1.8"/></svg></div>
-                    <h2>Affordable</h2>
-                    <h3>Transparent pricing with no hidden fees.</h3>
-                </div>
-                <div className='card'>
-                    <div className="icon-circle-blue"><svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.6V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.6 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.6 1z"/></svg></div>
-                    <h2>Easy to Expand</h2>
-                    <h3>Add modules anytime without migration headaches.</h3>
-                </div>
-                <div className='card'>
-                    <div className="icon-circle-blue"><svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg></div>
-                    <h2>Local Implementation</h2>
-                    <h3>On-site or remote setup across Ethiopia.</h3>
-                </div>
-            </div>
 
-            <div>
-                <div className='card'>
-                    <div className="icon-circle-blue"><svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
-                    <h2>Modular Design</h2>
-                    <h3>Start small, expand as your facility grows.</h3>
+                <div className="adv-hub">
+                    <span className="adv-hub-title">Why<br />Choose<br />Us</span>
                 </div>
-                <div className='card'>
-                    <div className="icon-circle-blue"><svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
-                    <h2>Healthcare Focused</h2>
-                    <h3>Built specifically for the African healthcare context.</h3>
+
+                <div className="adv-col right reveal reveal-stagger">
+                    {advantageItems.slice(4).map((item) => (
+                        <div className="adv-block" key={item.title} style={{ "--c": item.color }}>
+                            <div className="adv-icon">{item.icon}</div>
+                            <div className="adv-body">
+                                <h2>{item.title}</h2>
+                                <h3>{item.text}</h3>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-                <div className='card'>
-                    <div className="icon-circle-blue"><svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-                    <h2>Dedicated Support</h2>
-                    <h3>Local implementation and training by expert team.</h3>
-                </div>
-                <div className='card'>
-                    <div className="icon-circle-blue"><svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><circle cx="12" cy="12" r="9"/><polyline points="8 12 11 15 16 9"/></svg></div>
-                    <h2>Secure & Reliable</h2>
-                    <h3>Your patient data protected at every layer.</h3>
-                </div>
-            </div>
             </div>
                 </div>
 
@@ -831,9 +1009,12 @@ function Home(){
 
     <div className="footer">
 
-    <div className="footer-grid">
+    <div className="footer-grid reveal reveal-stagger">
         <div className="footer-brand">
-            <div className="footer-logo"><img src={logo} alt="Logo" /></div>
+            <div className="footer-brand-head">
+                <div className="footer-logo"><img src={logo} alt="CareCentral logo" /></div>
+                <span className="footer-brand-name">CareCentral</span>
+            </div>
             <h3>A modern Healthcare EMR+ ERP by Beltech Solutions empowering Ethiopia's clinics and hospitals with enterprise-grade technology.</h3>
             <div className="footer-socials">
                 <a
@@ -852,7 +1033,7 @@ function Home(){
                     ➤
                     </a>
 
-                    <a href="beltechsolns@gmail.com">
+                    <a href="mailto:beltechsolns@gmail.com">
                         
                     ✉
                     </a>
@@ -870,16 +1051,15 @@ function Home(){
 
         <div className="footer-links">
             <h4>RESOURCES</h4>
-            <a>Documentation</a>
-            <a>Privacy Policy</a>
-            <a>Terms of Service</a>
+            <Link to="/more-modules">Documentation</Link>
+            <a href="mailto:beltechsolns@gmail.com?subject=Privacy%20Policy%20Request">Privacy Policy</a>
+            <a href="mailto:beltechsolns@gmail.com?subject=Terms%20of%20Service%20Request">Terms of Service</a>
         </div>
-    </div>
-
-    <div className="footer-contact">
-        <h4>CONTACT</h4>
-        <span>✉ beltechsolns@gmail.com</span>
-        <span>📞 +251 95 593 5455</span>
+        <div className="footer-contact">
+            <h4>CONTACT</h4>
+            <a href="mailto:beltechsolns@gmail.com">✉ beltechsolns@gmail.com</a>
+            <a href="tel:+251955935455">📞 +251 95 593 5455</a>
+        </div>
     </div>
 
     <hr/>

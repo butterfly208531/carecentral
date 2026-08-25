@@ -557,14 +557,14 @@ function MoreModules() {
       </div>
       <div className="module-hero">
         <hr />
-        <h3 style={{ color: "white" }}>ALL MODULES</h3>
-        <h1>Every Modle. One Platform.</h1>
-        <h2>
+        <h3 className="reveal" style={{ color: "white" }}>ALL MODULES</h3>
+        <h1 className="reveal reveal-delay-1">Every Modle. One Platform.</h1>
+        <h2 className="reveal reveal-delay-2">
           CareCentral is fully modular start with what you need and expand at
           your own pace. All modules share the same patient database,
           eliminating duplicate data entry.
         </h2>
-        <div className="num">
+        <div className="num reveal reveal-stagger reveal-delay-3">
           <div>
             <h1>{modules.length}+</h1>
             <h3>Modules Available</h3>
@@ -576,7 +576,7 @@ function MoreModules() {
         </div>
       </div>
 
-      <div className="buttons">
+      <div className="buttons reveal reveal-stagger">
         <button
           className={filter === "all" ? "filter-btn active" : "filter-btn"}
           onClick={() => setFilter("all")}
@@ -605,7 +605,7 @@ function MoreModules() {
         </button>
       </div>
 
-      <div className="module-grid" id="my-cards">
+      <div className="module-grid reveal reveal-stagger" id="my-cards">
         {filteredModules.map((module) => (
           <div className="module-cards" key={module.id}>
             <div className="icons">
@@ -638,12 +638,12 @@ function MoreModules() {
       </div>
 
       <div className="bottom">
-        <h1 style={{ color: "white" }}>Ready to Get Started?</h1>
-        <h2>
+        <h1 className="reveal" style={{ color: "white" }}>Ready to Get Started?</h1>
+        <h2 className="reveal reveal-delay-1">
           Talk to our team to find the right module mix for your facility.          facility.
         </h2>
 
-        <div className="bottom-buttons">
+        <div className="bottom-buttons reveal reveal-stagger reveal-delay-2">
           <HashLink to="/" className="button1">
             ← Back to Home
           </HashLink>

@@ -7,11 +7,13 @@ import Contact from "./contact.jsx";
 import MoreModules from "./more-modules.jsx";
 
 import ScrollToTop from "./ScrollToTop";
+import RevealOnScroll from "./RevealOnScroll";
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <RevealOnScroll />
       <Routes>
         <Route path="/" element={<Home />} />
 

@@ -78,43 +78,44 @@ function Demo(){
     };
 
     return(
-        <>
-            <div className="final">
-            <div >
-            <hr style={{ color: "#7ec8ed" }} />
-            <h3 style={{ color: "#7ec8ed" }}>GET STARTED TODAY</h3>
-            <div className='title'><h1
-                className="text"
-                style={{ color: "rgb(224, 240, 255)", textAlign: "left", marginLeft: "40px" }}
-            >
-                Ready to Modernize Your Healthcare Facility?
-            </h1></div>
-            <h3 className="text" style={{ color: "rgb(224, 240, 255)" }}>
-                Schedule a personalized demo and see how CareCentral can transform patient care, streamline operations, and bring your facility into the digital era.
-            </h3>
-                <div className="text">
-                <span>📞 +251 955935455</span>
-                <span>✉ beltechsolns@gmail.com</span>
-                <span>➤ @belTechSolns</span>
-            </div>
-            </div>
+        <div className="final">
+            <div className="demo-card">
 
-            <div className="stats-row">
-                <div className="stat-box">
-                    <h1>48h</h1>
-                    <h3>Average setup time</h3>
-                </div>
-                <div className="stat-box">
-                    <h1>100%</h1>
-                    <h3>Local support team</h3>
-                </div>
-                <div className="stat-box">
-                    <h1>5 months</h1>
-                    <h3>Free post-launch support</h3>
-                </div>
-            </div>
+                {/* Left panel: headline + contacts + stats */}
+                <div className="demo-card-info reveal reveal-left">
+                    <hr />
+                    <h3 className="demo-card-tag">GET STARTED TODAY</h3>
+                    <h1 className="demo-card-title">
+                        Ready to Modernize Your Healthcare Facility?
+                    </h1>
+                    <h3 className="demo-card-sub">
+                        Schedule a personalized demo and see how CareCentral can transform patient care, streamline operations, and bring your facility into the digital era.
+                    </h3>
+                    <div className="contact-line">
+                        <span>📞 +251 955935455</span>
+                        <span>✉ beltechsolns@gmail.com</span>
+                        <span>➤ @belTechSolns</span>
+                    </div>
 
-             <form className="demo-form" onSubmit={handleSubmit}>
+                    <div className="demo-card-stats">
+                        <div className="stat-box">
+                            <h1>48h</h1>
+                            <h3>Average setup time</h3>
+                        </div>
+                        <div className="stat-box">
+                            <h1>100%</h1>
+                            <h3>Local support team</h3>
+                        </div>
+                        <div className="stat-box">
+                            <h1>5 months</h1>
+                            <h3>Free post-launch support</h3>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Right panel: demo request form */}
+                <div className="demo-card-form-panel reveal reveal-right">
+                <form className="demo-form" onSubmit={handleSubmit}>
             <h2>Request a Demo</h2>
             <h3>Fill in the form and our team will reach out within 24 hours.</h3>
 
@@ -213,9 +214,10 @@ function Demo(){
             <button type="submit" disabled={status === "submitting"}>
                 {status === "submitting" ? "Submitting..." : "Submit Demo Request → "}
             </button>
-        </form>
-                    </div>
-        </>
+                </form>
+                </div>
+            </div>
+        </div>
     )
 }
 

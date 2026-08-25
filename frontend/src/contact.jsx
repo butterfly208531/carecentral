@@ -1,10 +1,10 @@
 import { useState } from "react";
+import './home.css';
 
 function Contact() {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
-        subject: "",
         message: "",
     });
     const [submitted, setSubmitted] = useState(false);
@@ -18,94 +18,90 @@ function Contact() {
         e.preventDefault();
         if (formData.name && formData.email && formData.message) {
             setSubmitted(true);
-            setFormData({ name: "", email: "", subject: "", message: "" });
+            setFormData({ name: "", email: "", message: "" });
         }
     };
 
     return (
-        <div className="final">
-            <div>
-                <hr style={{ color: "#7ec8ed" }} />
-                <h3 style={{ color: "#7ec8ed" }}>GET IN TOUCH</h3>
-                <div className="title">
-                    <h1
-                        className="text"
-                        style={{ color: "rgb(224, 240, 255)", textAlign: "left", marginLeft: "40px" }}
-                    >
-                        Contact CareCentral
-                    </h1>
-                </div>
-                <h3 className="text" style={{ color: "rgb(224, 240, 255)" }}>
-                    Have questions about our healthcare platform or need dedicated support? Reach out to our team anytime.
-                </h3>
-                <div className="text">
-                    <span>📞 +251 955935455</span>
-                    <span>✉ beltechsolns@gmail.com</span>
-                    <span>➤ @belTechSolns</span>
-                </div>
-            </div>
-
-            <form className="demo-form" onSubmit={handleSubmit}>
-                <h2>Send Us a Message</h2>
-                <h3>We typically respond within 24 business hours.</h3>
-
-                <div className="form-row">
-                    <div className="form-group">
-                        <h4>Your Name *</h4>
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Abebe Kebede"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                        />
+        <div className="contact-section">
+            <div className="contact-card-wrap">
+                <div className="contact-info-card reveal reveal-left">
+                    <h2>Contact Us</h2>
+                    <div className="contact-info-row">
+                        <span className="contact-info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </span>
+                        <span>Addis Ababa,<br />Ethiopia</span>
                     </div>
-                    <div className="form-group">
-                        <h4>Email Address *</h4>
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="abebe@example.com"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                        />
+                    <div className="contact-info-row">
+                        <span className="contact-info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="m22 7-10 6L2 7" />
+                            </svg>
+                        </span>
+                        <span>beltechsolns@gmail.com</span>
+                    </div>
+                    <div className="contact-info-row">
+                        <span className="contact-info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                        </span>
+                        <span>+251 955935455</span>
+                    </div>
+                    <div className="contact-info-row">
+                        <span className="contact-info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13" />
+                                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                            </svg>
+                        </span>
+                        <span>@belTechSolns</span>
                     </div>
                 </div>
 
-                <div className="form-group-full">
-                    <h4>Subject</h4>
+                <form className="contact-form-card reveal reveal-right" onSubmit={handleSubmit}>
+                    <h2>Get in Touch</h2>
+                    <p className="contact-form-sub">Feel free to drop us a line below!</p>
+
                     <input
+                        className="contact-field"
                         type="text"
-                        name="subject"
-                        placeholder="Inquiry about clinic deployment"
-                        value={formData.subject}
+                        name="name"
+                        placeholder="Your Name"
+                        value={formData.name}
                         onChange={handleChange}
+                        required
                     />
-                </div>
-
-                <div className="form-group-full">
-                    <h4>Message *</h4>
+                    <input
+                        className="contact-field"
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                    />
                     <textarea
+                        className="contact-field"
                         name="message"
-                        placeholder="How can we assist you?"
+                        placeholder="Type your message here..."
                         value={formData.message}
                         onChange={handleChange}
                         required
                     ></textarea>
-                </div>
 
-                {submitted && (
-                    <h3 style={{ color: "rgb(39, 201, 63)", marginBottom: "15px" }}>
-                        Thank you! Your message has been received.
-                    </h3>
-                )}
+                    {submitted && (
+                        <p className="contact-success">Thank you! Your message has been received.</p>
+                    )}
 
-                <button type="submit">
-                    Send Message →
-                </button>
-            </form>
+                    <button type="submit" className="contact-send-btn">SEND</button>
+                </form>
+            </div>
         </div>
     );
 }

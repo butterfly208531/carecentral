@@ -1,6 +1,9 @@
 import { useState } from "react";
+import './home.css';
+
 function Question(){
     const [openQuestion, setOpenQuestion] = useState(null);
+    const [showAll, setShowAll] = useState(false);
     const faqs = [
     {
         question: "What is CareCentral?",
@@ -35,30 +38,37 @@ function Question(){
         <>
             <div className='ques'>
                 <hr />
-                <h3 style={{color: "#1a3d5c"}}>FAQ</h3>
-                <div className='title'><h1>Frequently Asked <span style={{color: "#3898D0"}}> Questions</span></h1></div>
-                <h3 style={{color: "rgb(35, 35, 35)"}}>Everything you need to know about CareCentral.</h3>
-                <div className="ques-grid">
-                    {faqs.map((faq, index) => (
-                        <div className="ques-grid-card" key={index}>
+                <h3 className="reveal" style={{color: "#7ec8ed"}}>FAQ</h3>
+                <div className='title reveal reveal-delay-1'><h1>Frequently Asked <span style={{color: "#7ec8ed"}}> Questions</span></h1></div>
+                <h3 className="reveal reveal-delay-2" style={{color: "rgba(255, 255, 255, 0.8)"}}>Everything you need to know about CareCentral.</h3>
+                <div className="ques-grid reveal reveal-stagger reveal-delay-2">
+                    {(showAll ? faqs : faqs.slice(0, 3)).map((faq, index) => (
+                        <div className="faq-pair" key={index}>
                             <div
-                                className="question"
+                                className="faq-bubble faq-bubble-question"
                                 onClick={() =>
                                     setOpenQuestion(openQuestion === index ? null : index)
                                 }
                             >
-                                <span style={{color: "gray", fontSize: "15px", fontWeight: "470"}}>{faq.question}</span>
-                                <span>{openQuestion === index ? "-" : "+"}</span>
+                                <span className="faq-badge faq-badge-question">Question</span>
+                                <span className="faq-question-text">{faq.question}</span>
+                                <span className="faq-toggle">{openQuestion === index ? "−" : "+"}</span>
                             </div>
 
                             {openQuestion === index && (
-                                <div className="answer">
+                                <div className="faq-bubble faq-bubble-answer">
+                                    <span className="faq-badge faq-badge-answer">Answer</span>
                                     {faq.answer}
                                 </div>
                             )}
                         </div>
                     ))}
                 </div>
+
+                <button className="faq-more-btn" onClick={() => setShowAll(!showAll)}>
+                    {showAll ? "Show Less ▲" : "Show More ▼"}
+                </button>
+                {!showAll && <div className="faq-toggle-hint">+{faqs.length - 3} more questions</div>}
                 </div>
         </>
     )
