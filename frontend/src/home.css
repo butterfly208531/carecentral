@@ -2015,7 +2015,8 @@ textarea.contact-field{
     width: 48px;
     height: 48px;
     background-color: rgb(224, 236, 253);
-    border-radius: 40%;
+    /* hexagonal badge (pointy-top honeycomb) */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3119,7 +3120,10 @@ textarea.contact-field{
     display: flex;
     align-items: center;
     gap: 13px;
-    background: var(--c);
+    background: linear-gradient(135deg,
+        color-mix(in srgb, var(--c) 82%, #ffffff) 0%,
+        var(--c) 48%,
+        color-mix(in srgb, var(--c) 86%, #000000) 100%);
     border-radius: 10px;
     padding: 15px 18px;
     transform: perspective(900px) rotateY(0deg);
@@ -3170,7 +3174,7 @@ textarea.contact-field{
     transform: perspective(900px) rotateY(0deg) translateY(-4px);
     box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.28),
-        0 16px 30px rgba(26, 63, 113, 0.26),
+        0 16px 30px color-mix(in srgb, var(--c) 45%, transparent),
         0 26px 48px rgba(26, 63, 113, 0.18);
 }
 
@@ -3346,5 +3350,275 @@ textarea.contact-field{
 
     .card{
         padding: 24px 20px;
+    }
+}
+
+/* ---------- Healthcare ERP hexagon infographic ---------- */
+.hex-wrap{
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 10px 20px 6px;
+    background: radial-gradient(circle at 50% 42%, #edf3f9 0%, #ffffff 72%);
+}
+
+.hex-scene{
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 940 / 760;
+    margin: 0 auto;
+}
+
+.hex-tile{
+    position: absolute;
+    width: 28.5%;
+    aspect-ratio: 1 / 0.92;
+    z-index: 2;
+    filter: drop-shadow(0 14px 24px rgba(26, 61, 92, 0.18));
+    transition: filter 0.35s ease;
+}
+
+.hex-tile:hover{
+    filter: drop-shadow(0 24px 38px rgba(26, 61, 92, 0.3));
+}
+
+.hex-pos-1{ left: 13%;  top: 1%; }
+.hex-pos-2{ right: 13%; top: 1%; }
+.hex-pos-3{ right: 0.5%; top: 35%; }
+.hex-pos-4{ right: 13%; bottom: 1%; }
+.hex-pos-5{ left: 13%;  bottom: 1%; }
+.hex-pos-6{ left: 0.5%; top: 35%; }
+
+/* colored hexagon behind (creates the folded 3D rim) */
+.hex-under{
+    position: absolute;
+    inset: 0;
+    background: var(--hex-accent, #3898d0);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+/* white face lifted up so the color shows at the bottom */
+.hex-face{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 7.5%;
+    background: #ffffff;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 10% 17% 13%;
+    text-align: left;
+}
+
+.hex-face h2{
+    margin: 0;
+    font-size: clamp(12.5px, 1.6vw, 17px);
+    font-weight: 700;
+    color: #1a3d5c;
+    line-height: 1.15;
+}
+
+.hex-face p{
+    margin: 0;
+    font-size: clamp(10px, 1.15vw, 12.5px);
+    color: #7a8794;
+    line-height: 1.35;
+}
+
+.hex-icon{
+    margin-top: 3px;
+    color: var(--hex-accent, #3898d0);
+}
+
+.hex-icon svg{
+    width: clamp(15px, 1.9vw, 21px);
+    height: auto;
+    display: block;
+}
+
+.hex-pos-2 .hex-icon,
+.hex-pos-3 .hex-icon,
+.hex-pos-4 .hex-icon{
+    margin-left: auto;
+}
+
+/* center hexagon (flex slot instead of translate, so the
+   reveal-stagger transform on children is not overwritten) */
+.hex-center-slot{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.hex-center{
+    position: relative;
+    width: 27%;
+    aspect-ratio: 1 / 0.92;
+    filter: drop-shadow(0 18px 30px rgba(26, 61, 92, 0.22));
+}
+
+.hex-center-face{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f3f7fb 100%);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hex-center-face span{
+    font-size: clamp(14px, 2vw, 23px);
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #1a3d5c;
+    line-height: 1.25;
+}
+
+.hex-center-face span b{
+    color: #3898d0;
+}
+
+/* hexagon infographic responsive: ring -> vertical stack */
+@media (max-width: 900px){
+    .hex-scene{
+        aspect-ratio: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 6px 0 14px;
+    }
+
+    .hex-tile,
+    .hex-center{
+        position: static;
+        width: min(300px, 84vw);
+    }
+
+    .hex-center-slot{
+        position: static;
+        display: block;
+        width: min(300px, 84vw);
+        margin-bottom: 4px;
+    }
+
+    .hex-center{
+        width: 100%;
+    }
+
+    .hex-face{
+        padding: 12% 16% 15%;
+    }
+
+    .hex-face h2{ font-size: 16px; }
+    .hex-face p{ font-size: 12.5px; }
+    .hex-icon svg{ width: 20px; }
+    .hex-center-face span{ font-size: 19px; }
+}
+
+/* ---------- "Built for Modern Healthcare" badge cards ---------- */
+.badge-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px 20px;
+    max-width: 880px;
+    margin: 34px auto 0;
+    padding: 6px 24px 28px;
+}
+
+/* shadow lives on the wrapper so clip-path doesn't clip it */
+.badge-cell{
+    filter: drop-shadow(0 10px 18px rgba(26, 61, 92, 0.16));
+    transition: filter 0.35s ease;
+}
+
+.badge-cell:hover{
+    filter: drop-shadow(0 18px 30px rgba(26, 61, 92, 0.28));
+}
+
+.badge-card{
+    position: relative;
+    background: #ffffff;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), 50% 100%, 0 calc(100% - 20px));
+    padding: 72px 14px 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+}
+
+/* bookmark ribbon at the top — holds the icon */
+.badge-ribbon{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 58px;
+    height: 62px;
+    background: var(--badge-accent, #3898d0);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 13px;
+    color: #ffffff;
+}
+
+.badge-ribbon svg{
+    width: 22px;
+    height: 22px;
+}
+
+/* small accent arrow under the ribbon, like the reference */
+.badge-arrow{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid var(--badge-accent, #3898d0);
+}
+
+.badge-card h2{
+    margin: 2px 0 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a3d5c;
+    line-height: 1.25;
+}
+
+.badge-card p{
+    margin: 0;
+    font-size: 12px;
+    color: #7a8794;
+    line-height: 1.5;
+    max-width: 165px;
+}
+
+@media (max-width: 760px){
+    .badge-grid{
+        grid-template-columns: 1fr 1fr;
+        gap: 22px 16px;
+    }
+}
+
+@media (max-width: 560px){
+    .badge-grid{
+        grid-template-columns: 1fr;
+        padding: 6px 18px 24px;
+    }
+
+    .badge-card{
+        padding: 68px 14px 24px;
     }
 }
