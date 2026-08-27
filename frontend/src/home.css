@@ -657,7 +657,7 @@ h1{
 .fifth-white{
     text-align: center;
     background-color: rgb(244, 245, 249);
-    padding-top: 90px;
+    padding-top: 60px;
 }
 
 .third-white h3, .second-gray h3, .fifth-white h3{
@@ -735,21 +735,19 @@ h1{
 .prices{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    padding-right: 150px;
-    padding-left: 150px;
-    margin-top: 60px;
-    margin-bottom: 50px;
-    padding-bottom: 50px;
-
-    
+    gap: 24px;
+    padding-right: 110px;
+    padding-left: 110px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 .price-card{
     background-color: #ffffff;
     border: 1px solid #e8ecf1;
-    border-radius: 28px;
-    padding: 34px 30px 30px;
+    border-radius: 22px;
+    padding: 22px 22px 20px;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -767,11 +765,11 @@ h1{
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
 }
 
 .price-card-label{
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 600;
     letter-spacing: 2.5px;
     text-transform: uppercase;
@@ -785,7 +783,7 @@ h1{
 }
 
 .price-card-amount{
-    font-size: 52px;
+    font-size: 40px;
     font-weight: 700;
     color: #5580F4;
     letter-spacing: -1px;
@@ -793,44 +791,44 @@ h1{
 }
 
 .price-card-period{
-    font-size: 15px;
+    font-size: 13px;
     color: #8a8f98;
 }
 
 .price-card-divider{
     border-top: 1px solid #e9edf1;
-    margin: 24px 0 20px;
+    margin: 14px 0 14px;
     width: 100%;
 }
 
 .price-card-desc{
     color: #6b7280;
-    font-size: 15px;
-    margin: 0 0 20px;
+    font-size: 13px;
+    margin: 0 0 14px;
 }
 
 .price-card-features{
     list-style: none;
     padding: 0;
-    margin: 0 0 30px;
+    margin: 0 0 20px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 10px;
     flex: 1;
 }
 
 .price-card-features li{
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     color: #26313d;
-    font-size: 15px;
+    font-size: 13.5px;
     font-weight: 500;
 }
 
 .price-check{
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     background-color: #5580F4;
     color: #ffffff;
@@ -841,8 +839,8 @@ h1{
 }
 
 .price-check svg{
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
 }
 
 
@@ -853,12 +851,12 @@ h1{
     justify-content: center;
     gap: 10px;
     width: 100%;
-    padding: 18px 15px;
+    padding: 12px 15px;
     border: none;
-    border-radius: 14px;
+    border-radius: 10px;
     background-color: #5580F4;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     font-family: inherit;
     cursor: pointer;
