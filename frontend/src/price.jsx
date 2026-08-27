@@ -51,8 +51,8 @@ function Price(){
     return (<>
     <div className='fifth-white'>
                     <hr />
-                    <h3 className="reveal" style={{color: "#1a3d5c"}}>PRICING</h3>
-                    <div className='title reveal reveal-delay-1'><h1>Simple, Transparent <span style={{color: "#3898D0"}}> Pricing</span></h1></div>
+                    <h3 className="reveal" style={{color: "#5580F4"}}>PRICING</h3>
+                    <div className='title reveal reveal-delay-1'><h1>Simple, Transparent <span style={{color: "#5580F4"}}> Pricing</span></h1></div>
                     <h3 className="reveal reveal-delay-2">Choose the plan that fits your facility. No hidden fees, no surprises.</h3>
 
                     <div className = "prices reveal reveal-stagger">

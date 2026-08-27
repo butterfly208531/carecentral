@@ -51,47 +51,47 @@ const integrationNodes = [
 ];
 
 const advantageItems = [
-    { title: "Built on Odoo", text: "Enterprise-grade foundation trusted by thousands globally.", color: "#3f51b5", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>) },
-    { title: "Affordable", text: "Transparent pricing with no hidden fees.", color: "#27ae60", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.5c0-1-1.3-1.8-3-1.8s-3 .8-3 2 1.3 1.6 3 1.8 3 .8 3 2-1.3 2-3 2-3-.8-3-1.8"/></svg>) },
-    { title: "Easy to Expand", text: "Add modules anytime without migration headaches.", color: "#00a8a8", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.6V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.6 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.6 1z"/></svg>) },
-    { title: "Local Implementation", text: "On-site or remote setup across Ethiopia.", color: "#f89c1c", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>) },
-    { title: "Modular Design", text: "Start small, expand as your facility grows.", color: "#29abe2", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>) },
-    { title: "Healthcare Focused", text: "Built specifically for the African healthcare context.", color: "#ed2b4f", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>) },
-    { title: "Dedicated Support", text: "Local implementation and training by expert team.", color: "#a03e99", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>) },
-    { title: "Secure & Reliable", text: "Your patient data protected at every layer.", color: "#1a3d5c", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="9"/><polyline points="8 12 11 15 16 9"/></svg>) },
+    { title: "Built on Odoo", text: "Enterprise-grade foundation trusted by thousands globally.", color: "#5580F4", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>) },
+    { title: "Affordable", text: "Transparent pricing with no hidden fees.", color: "#5580F4", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.5c0-1-1.3-1.8-3-1.8s-3 .8-3 2 1.3 1.6 3 1.8 3 .8 3 2-1.3 2-3 2-3-.8-3-1.8"/></svg>) },
+    { title: "Easy to Expand", text: "Add modules anytime without migration headaches.", color: "#5580F4", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.6V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.6 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.6 1z"/></svg>) },
+    { title: "Local Implementation", text: "On-site or remote setup across Ethiopia.", color: "#5580F4", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>) },
+    { title: "Modular Design", text: "Start small, expand as your facility grows.", color: "#5580F4", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>) },
+    { title: "Healthcare Focused", text: "Built specifically for the African healthcare context.", color: "#5580F4", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>) },
+    { title: "Dedicated Support", text: "Local implementation and training by expert team.", color: "#5580F4", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>) },
+    { title: "Secure & Reliable", text: "Your patient data protected at every layer.", color: "#5580F4", icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="9"/><polyline points="8 12 11 15 16 9"/></svg>) },
 ];
 
 const hexFeatures = [
-    { num: "01", title: "Healthcare ERP", text: "Complete Platform", color: "#f2545b",
+    { num: "01", title: "Healthcare ERP", text: "Complete Platform", color: "#5580F4",
       icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>) },
-    { num: "02", title: "Modular", text: "Architecture", color: "#f6b93b",
+    { num: "02", title: "Modular", text: "Architecture", color: "#5580F4",
       icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>) },
-    { num: "03", title: "Multi-Branch", text: "Ready", color: "#4caf50",
+    { num: "03", title: "Multi-Branch", text: "Ready", color: "#5580F4",
       icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="13" x2="16" y2="13"/></svg>) },
-    { num: "04", title: "Cloud & On-Premise", text: "Deployment", color: "#00a8a8",
+    { num: "04", title: "Cloud & On-Premise", text: "Deployment", color: "#5580F4",
       icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 10a5 5 0 0 0-9.6-1.8A4 4 0 0 0 6 16h12a4 4 0 0 0 0-8z"/></svg>) },
-    { num: "05", title: "Built on Odoo", text: "Enterprise Grade", color: "#3f51b5",
+    { num: "05", title: "Built on Odoo", text: "Enterprise Grade", color: "#5580F4",
       icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg>) },
-    { num: "06", title: "Machine Integration", text: "Ready", color: "#a03e99",
+    { num: "06", title: "Machine Integration", text: "Ready", color: "#5580F4",
       icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.6V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.6 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.6 1z"/></svg>) },
 ];
 
 const badgeCards = [
-    { title: "Modern EMR", text: "Electronic Medical Records designed for clinical efficiency and accuracy.", color: "#f89c1c",
+    { title: "Modern EMR", text: "Electronic Medical Records designed for clinical efficiency and accuracy.", color: "#5580F4",
       icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 2v3H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2V2z"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>) },
-    { title: "Cloud Ready", text: "Accessible anywhere with secure cloud infrastructure.", color: "#3f51b5",
+    { title: "Cloud Ready", text: "Accessible anywhere with secure cloud infrastructure.", color: "#5580F4",
       icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 10a5 5 0 0 0-9.6-1.8A4 4 0 0 0 6 16h12a4 4 0 0 0 0-8z"/></svg>) },
-    { title: "Scalable", text: "Grows with your facility from single clinic to hospital network.", color: "#29abe2",
+    { title: "Scalable", text: "Grows with your facility from single clinic to hospital network.", color: "#5580F4",
       icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>) },
-    { title: "Easy to Use", text: "Intuitive UI designed for clinical staff, not just IT teams.", color: "#d4145a",
+    { title: "Easy to Use", text: "Intuitive UI designed for clinical staff, not just IT teams.", color: "#5580F4",
       icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.6V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.6 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.6 1z"/></svg>) },
-    { title: "Hospital ERP", text: "Full enterprise resource planning tailored for healthcare operations.", color: "#39b54a",
+    { title: "Hospital ERP", text: "Full enterprise resource planning tailored for healthcare operations.", color: "#5580F4",
       icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="13" x2="16" y2="13"/></svg>) },
-    { title: "On-Premise Ready", text: "Deploy within your own infrastructure for full data control.", color: "#1b75bc",
+    { title: "On-Premise Ready", text: "Deploy within your own infrastructure for full data control.", color: "#5580F4",
       icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>) },
-    { title: "Secure", text: "Role-based access, audit logs, and enterprise-grade security.", color: "#ed2b4f",
+    { title: "Secure", text: "Role-based access, audit logs, and enterprise-grade security.", color: "#5580F4",
       icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>) },
-    { title: "Highly Customizable", text: "Adapt modules and workflows to your facility's unique needs.", color: "#f0b400",
+    { title: "Highly Customizable", text: "Adapt modules and workflows to your facility's unique needs.", color: "#5580F4",
       icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="13 2 3 14 11 14 9 22 21 10 13 10 13 2"/></svg>) },
 ];
 
@@ -539,7 +539,7 @@ function Home(){
             <div className = "Navigation-bar">
                 <div className = "left-nav">
                     <div className = "navLogo"><img src={logoOnly} alt="Logo Only" /></div>
-                    <span style={{color:"#3898d0", marginBottom: "9%"}}>CareCentral</span>
+                    <span style={{color:"#5580F4", marginBottom: "9%"}}>CareCentral</span>
                 </div>
                 <div className = "mid-nav">
                     <a href="#features">Features</a>
@@ -602,7 +602,7 @@ function Home(){
                             <span className="dot green"></span>
                         </div>
                         <div className="dashboard-title-bar">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3898D0" strokeWidth="2"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5580F4" strokeWidth="2"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
                             <span>Health Management Dashboard</span>
                         </div>
                         <div className="dashboard-period">
@@ -688,8 +688,8 @@ function Home(){
                                 <div className="donut-wrapper">
                                     <svg viewBox="0 0 100 100" className="donut-svg">
                                         <circle cx="50" cy="50" r="40" fill="none" stroke="#f0f0f0" strokeWidth="14"/>
-                                        <path d="M 50 10 A 40 40 0 1 1 15.4 70" fill="none" stroke="#3898D0" strokeWidth="14" strokeLinecap="round"/>
-                                        <path d="M 15.4 70 A 40 40 0 0 1 50 10" fill="none" stroke="#7ec8ed" strokeWidth="14" strokeLinecap="round"/>
+                                        <path d="M 50 10 A 40 40 0 1 1 15.4 70" fill="none" stroke="#5580F4" strokeWidth="14" strokeLinecap="round"/>
+                                        <path d="M 15.4 70 A 40 40 0 0 1 50 10" fill="none" stroke="#5580F4" strokeWidth="14" strokeLinecap="round"/>
                                     </svg>
                                     <div className="donut-center">
                                         <strong>247</strong>
@@ -732,19 +732,19 @@ function Home(){
                                     <svg viewBox="0 0 300 100" className="line-svg" preserveAspectRatio="none">
                                         <defs>
                                             <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
-                                                <stop offset="0%" stopColor="#3898D0" stopOpacity="0.25"/>
-                                                <stop offset="100%" stopColor="#3898D0" stopOpacity="0"/>
+                                                <stop offset="0%" stopColor="#5580F4" stopOpacity="0.25"/>
+                                                <stop offset="100%" stopColor="#5580F4" stopOpacity="0"/>
                                             </linearGradient>
                                         </defs>
                                         <line x1="0" y1="25" x2="300" y2="25" stroke="#f0f0f0" strokeWidth="0.5"/>
                                         <line x1="0" y1="50" x2="300" y2="50" stroke="#f0f0f0" strokeWidth="0.5"/>
                                         <line x1="0" y1="75" x2="300" y2="75" stroke="#f0f0f0" strokeWidth="0.5"/>
                                         <path d="M 0 65 L 60 45 L 120 55 L 180 28 L 240 38 L 300 18 L 300 100 L 0 100 Z" fill="url(#areaGrad)"/>
-                                        <path d="M 0 65 L 60 45 L 120 55 L 180 28 L 240 38 L 300 18" fill="none" stroke="#3898D0" strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round"/>
-                                        <circle cx="0" cy="65" r="4" fill="#3898D0"/><circle cx="60" cy="45" r="4" fill="#3898D0"/>
-                                        <circle cx="120" cy="55" r="4" fill="#3898D0"/><circle cx="180" cy="28" r="4" fill="#3898D0"/>
-                                        <circle cx="240" cy="38" r="4" fill="#3898D0"/><circle cx="300" cy="18" r="4" fill="#3898D0"/>
-                                        <circle cx="180" cy="28" r="6" fill="white" stroke="#3898D0" strokeWidth="2"/>
+                                        <path d="M 0 65 L 60 45 L 120 55 L 180 28 L 240 38 L 300 18" fill="none" stroke="#5580F4" strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round"/>
+                                        <circle cx="0" cy="65" r="4" fill="#5580F4"/><circle cx="60" cy="45" r="4" fill="#5580F4"/>
+                                        <circle cx="120" cy="55" r="4" fill="#5580F4"/><circle cx="180" cy="28" r="4" fill="#5580F4"/>
+                                        <circle cx="240" cy="38" r="4" fill="#5580F4"/><circle cx="300" cy="18" r="4" fill="#5580F4"/>
+                                        <circle cx="180" cy="28" r="6" fill="white" stroke="#5580F4" strokeWidth="2"/>
                                     </svg>
                                 </div>
                                 <div className="x-axis-months">
@@ -784,8 +784,8 @@ function Home(){
 
             <div className = "gray" id="about">
                 <hr/>
-                <h3 className="reveal" style={{color: "#1a3d5c"}}>Why CareCentral</h3>
-                <div className="title reveal reveal-delay-1"><h1>Built for Modern<span style={{color: "#3898d0"}}> Healthcare</span></h1></div>
+                <h3 className="reveal" style={{color: "#5580F4"}}>Why CareCentral</h3>
+                <div className="title reveal reveal-delay-1"><h1>Built for Modern<span style={{color: "#5580F4"}}> Healthcare</span></h1></div>
                 <h3 className="reveal reveal-delay-2">A platform designed from the ground up for clinics, hospitals, and multi-branch <br/> healthcare networks in Ethiopia.</h3>
 
                 <div className='badge-grid reveal reveal-stagger'>
@@ -805,8 +805,8 @@ function Home(){
 
             <div className='fourth'>
                 <hr/>
-                <h3 className="reveal" style = {{color: "#1a3d5c"}}>Core Modules</h3>
-                <div className='title reveal reveal-delay-1'><h1 >Everything Your <span style={{color: "#3898d0"}}>Facility Needs</span></h1></div>
+                <h3 className="reveal" style = {{color: "#5580F4"}}>Core Modules</h3>
+                <div className='title reveal reveal-delay-1'><h1 >Everything Your <span style={{color: "#5580F4"}}>Facility Needs</span></h1></div>
                 <h3 className="reveal reveal-delay-2" style = {{color: "gray"}}>Integrated clinical workflows that cover every touchpoint — from the front desk to the <br/>ICU.</h3>
 
                 <div className="facility-carousel reveal" role="region" aria-label="Everything your facility needs modules">
@@ -875,16 +875,16 @@ function Home(){
 
             <div className = "second-blue">
                 <hr />
-                <div className='title reveal'><h1>Expand to Any <span style={{color: "#3898d0"}}></span>Specialty</h1></div>
+                <div className='title reveal'><h1>Expand to Any <span style={{color: "#5580F4"}}></span>Specialty</h1></div>
 
                 <SpecialtyWheel items={specialtyModules} />
             </div>
 
            <div className="third-white" id="features">
   <hr />
-  <h3 className="reveal" style={{ color: "#1a3d5c" }}>Platform Features</h3>
+  <h3 className="reveal" style={{ color: "#5580F4" }}>Platform Features</h3>
   <div className='title reveal reveal-delay-1'>
-    <h1>Engineered for Healthcare <span style={{ color: "#3898d0" }}>Excellence</span></h1>
+    <h1>Engineered for Healthcare <span style={{ color: "#5580F4" }}>Excellence</span></h1>
   </div>
   <h3 className="reveal reveal-delay-2">Every feature built with clinical workflow, compliance, and usability in mind.</h3>
 
@@ -919,8 +919,8 @@ function Home(){
 
             <div className="second-gray">
                  <hr />
-                <h3 className="reveal" style={{color: "#1a3d5c"}}>Integrations</h3>
-                <div className='title reveal reveal-delay-1'><h1>Connected to Everything<span style={{color: "#3898d0"}}> You Need</span> </h1></div>
+                <h3 className="reveal" style={{color: "#5580F4"}}>Integrations</h3>
+                <div className='title reveal reveal-delay-1'><h1>Connected to Everything<span style={{color: "#5580F4"}}> You Need</span> </h1></div>
                 <h3 className="reveal reveal-delay-2">Seamlessly integrated with business operations, medical devices, and future health standards.</h3>
 
             <div
@@ -950,7 +950,7 @@ function Home(){
 
                                 <div className='advantages'>
                 <hr />
-                <div className='title reveal'><h1>The CareCentral<span style={{color: "#3898d0"}}> Advantage</span></h1></div>
+                <div className='title reveal'><h1>The CareCentral<span style={{color: "#5580F4"}}> Advantage</span></h1></div>
                 <h3 className="reveal" style={{color: "gray"}}>We are not just software — we are your long-term healthcare technology partner.</h3>
 
 

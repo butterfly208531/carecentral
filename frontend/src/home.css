@@ -20,7 +20,7 @@ h2{
 }
 
 h1{
-    color:rgb(54, 57, 78);
+    color:#5580F4;
     font-size: 36px;
 }
 
@@ -51,13 +51,13 @@ h1{
   z-index: 1000;
   background-color: white;
   width: 100%;
-  box-shadow: 1px 1px 3px rgb(237, 237, 255);
+  box-shadow: 1px 1px 3px rgba(85, 128, 244, 0.08);
 }
 
 
 
 .Navigation-bar span, .module-Navigation-bar span{
-    color: #3898D0;
+    color: #5580F4;
     font-weight: bold;
     font-size: 18px;
 }
@@ -67,7 +67,7 @@ h1{
 }
 
 .Navigation-bar button, .module-Navigation-bar button{
-    background-color: #3898D0;
+    background-color: #5580F4;
     padding: 10px 20px;
     border-radius: 10px;
     color: black;
@@ -90,13 +90,13 @@ h1{
 }
 
 .mid-nav a:hover {
-    color: #5ab0e0;  
+    color: #5580F4;  
     padding-bottom: 1px; 
     transition: 0.5 ease;       /* Color when hovering */
 }
 
 .mid-nav a.active {
-    color: #3898D0;
+    color: #5580F4;
     font-weight: bold;
 }
 .mid-nav, .left-nav, .right-nav{
@@ -113,7 +113,7 @@ h1{
 
 .right-nav button{
     color: white;
-    background-color: #3898D0;
+    background-color: #5580F4;
 }
 
 .right-nav button:hover{
@@ -127,10 +127,10 @@ h1{
     color: rgb(255, 255, 255);
     background: linear-gradient(
         135deg,
-        #3898D0 0%,
-        #2c7aa8 0%,
-        #266d96 70%,
-        #1a3d5c 100%)
+        #5580F4 0%,
+        #5580F4 0%,
+        #5580F4 70%,
+        #5580F4 100%)
 
 }
 
@@ -145,10 +145,10 @@ h1{
 .request-button{
             background: linear-gradient(
         135deg,
-        #3898D0 0%,
-        #2c7aa8 0%,
-        #266d96 100%,
-        #266d96 100%);
+        #5580F4 0%,
+        #5580F4 0%,
+        #5580F4 100%,
+        #5580F4 100%);
 
             box-shadow: 2px 2px 8px rgb(82, 82, 82);
 }
@@ -159,10 +159,10 @@ h1{
 
 .made-for-eth{
     margin-bottom: 70px;
-    color: #7ec8ed;
+    color: #5580F4;
     background-color: rgba(255, 255, 255, 0.2);
     border-color: rgb(255, 255, 255);
-    border: 1px solid rgb(237, 231, 255);  
+    border: 1px solid rgba(85, 128, 244, 0.35);  
     width: 350px;
     padding: 5px;
     padding-left: 20px;
@@ -170,7 +170,7 @@ h1{
 }
 
 .made-for-eth span{
-     color: #7ec8ed;
+     color: #5580F4;
 }
 
 .two-buttons{
@@ -190,7 +190,7 @@ h1{
 }
 
 .two-buttons button:hover{
-    box-shadow: 1px 1px 10px rgb(0, 195, 255);
+    box-shadow: 1px 1px 10px rgba(85, 128, 244, 0.4);
     cursor: pointer;
 }
 
@@ -239,7 +239,7 @@ h1{
 }
 
 .learn-more-link{
-    color: #3898D0;
+    color: #5580F4;
     font-size: 13px;
     font-weight: bold;
     text-decoration: none;
@@ -248,7 +248,7 @@ h1{
 }
 
 .learn-more-link:hover{
-    color: #2c7aa8;
+    color: #5580F4;
     margin-left: 4px;
 }
 
@@ -262,8 +262,8 @@ h1{
 .gray hr{
     width: 30px;
     margin-bottom: -10px;
-    color: #3898D0;
-    border: 2px solid #7ec8ed;
+    color: #5580F4;
+    border: 2px solid #5580F4;
     border-radius: 50px;
 }
 
@@ -284,9 +284,9 @@ h1{
     text-align: left;
     border-radius: 18px;
     padding: 28px 26px;
-    box-shadow: 0 12px 30px rgba(26, 63, 113, 0.08);
-    border: 1px solid rgba(94, 126, 173, 0.12);
-    border-left: 3.5px solid #3898D0;
+    box-shadow: 0 12px 30px rgba(85, 128, 244, 0.08);
+    border: 1px solid rgba(85, 128, 244, 0.12);
+    border-left: 3.5px solid #5580F4;
     transition: all 0.25s ease;
 }
 .card h3{
@@ -297,17 +297,17 @@ h1{
 }
 
 .card h2{
-    color: rgb(34, 56, 90);
+    color: #5580F4;
     font-weight: 600;
     font-size: 17px;
     margin-bottom: 8px;
 }
 
 .card:hover{
-    box-shadow: 0 18px 40px rgba(26, 63, 113, 0.14);
+    box-shadow: 0 18px 40px rgba(85, 128, 244, 0.14);
     transform: translateY(-2px);
     transition: all 0.25s ease;
-    border-left: 3.5px solid #2c7aa8; 
+    border-left: 3.5px solid #5580F4; 
 }
 
 .fourth{
@@ -320,8 +320,8 @@ h1{
 .fourth hr{
     
     width: 25px;
-    color: #3898D0;
-    border: 2px solid #7ec8ed;
+    color: #5580F4;
+    border: 2px solid #5580F4;
     border-radius: 50px;
     margin-bottom: -10px;
 }
@@ -381,14 +381,14 @@ h1{
     cursor: pointer;
     transition: all 0.25s ease;
     background: white;
-    box-shadow: 0 2px 10px rgba(26, 63, 113, 0.08);
+    box-shadow: 0 2px 10px rgba(85, 128, 244, 0.08);
     text-align: left;
 }
 
 .facility-thumbnail:hover{
-    box-shadow: 0 6px 18px rgba(26, 63, 113, 0.14);
+    box-shadow: 0 6px 18px rgba(85, 128, 244, 0.14);
     transform: translateY(-1px);
-    border-color: rgba(56, 152, 208, 0.35);
+    border-color: rgba(85, 128, 244, 0.35);
 }
 
 .facility-thumbnail-image-container{
@@ -432,7 +432,7 @@ h1{
 .facility-thumbnail-title{
     font-size: 13px;
     font-weight: 600;
-    color: rgb(35, 55, 85);
+    color: #5580F4;
     line-height: 1.35;
     display: block;
 }
@@ -482,7 +482,7 @@ h1{
 .facility-icon-box{
     width: 44px;
     height: 44px;
-    background: #3898d0;
+    background: #5580F4;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -531,7 +531,7 @@ h1{
 }
 
 .facility-check{
-    color: rgb(117, 223, 250);
+    color: #5580F4;
     font-weight: 700;
     flex-shrink: 0;
 }
@@ -549,7 +549,7 @@ h1{
     height: 11px;
     border-radius: 999px;
     border: none;
-    background: rgba(74, 112, 170, 0.35);
+    background: rgba(85, 128, 244, 0.35);
     cursor: pointer;
     transition: all 0.28s ease;
     padding: 0;
@@ -558,7 +558,7 @@ h1{
 .progress-dot.active,
 .progress-dot:hover{
     width: 32px;
-    background: #3898D0;
+    background: #5580F4;
     border-radius: 999px;
 }
 
@@ -567,7 +567,7 @@ h1{
     align-items: center;
     padding: 6px 12px;
     border-radius: 999px;
-    color: #3898D0;
+    color: #5580F4;
     background-color: rgb(209, 236, 253);
     font-size: 12px;
     font-weight: 700;
@@ -577,7 +577,7 @@ h1{
 .more-modules{
     padding: 10px 20px 15px 20px;
     border-radius: 16px;
-    border: 1px solid #3898D0;
+    border: 1px solid #5580F4;
     font-size: 14px;
     text-decoration: none;
     color: rgb(69, 69, 69);
@@ -585,7 +585,7 @@ h1{
 }
 
 .more-modules:hover{
-    background-color: #3898D0;
+    background-color: #5580F4;
     color:  white;
     cursor: pointer;
 }
@@ -597,17 +597,17 @@ h1{
     padding-bottom: 65px;
     background: linear-gradient(
         135deg,
-        #3898D0 0%,
-        #2c7aa8 0%,
-        #266d96 70%,
-        #1a3d5c 100%)
+        #5580F4 0%,
+        #5580F4 0%,
+        #5580F4 70%,
+        #5580F4 100%)
 
 }
 
 .second-blue hr, .fifth-white hr, .ques hr, .final hr{
     width: 25px;
-    color: #3898D0;
-    border: 2px solid #7ec8ed;
+    color: #5580F4;
+    border: 2px solid #5580F4;
     border-radius: 50px;
     margin-bottom: -10px;
 }
@@ -654,8 +654,8 @@ h1{
 
 .third-white hr, .second-gray hr{
     width: 30px;
-    color: #3898D0;
-    border: 2px solid #7ec8ed;
+    color: #5580F4;
+    border: 2px solid #5580F4;
     border-radius: 50px;
     margin-bottom: -8px;
     margin-top: 80px;
@@ -685,7 +685,7 @@ h1{
 
 .ques{
     margin-top: 0px;
-    background-color: #1a3d5c;
+    background-color: #5580F4;
     padding-bottom: 90px;
 }
 
@@ -741,13 +741,13 @@ h1{
     text-align: left;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 12px 30px rgba(26, 61, 92, 0.08);
+    box-shadow: 0 12px 30px rgba(85, 128, 244, 0.08);
     transition: all 0.5s ease;
 }
 
 .price-card:hover{
     margin-top: -10px;
-    box-shadow: 0 18px 44px rgba(56, 152, 208, 0.22);
+    box-shadow: 0 18px 44px rgba(85, 128, 244, 0.22);
 }
 
 .price-card-top{
@@ -775,7 +775,7 @@ h1{
 .price-card-amount{
     font-size: 52px;
     font-weight: 700;
-    color: #1a3d5c;
+    color: #5580F4;
     letter-spacing: -1px;
     line-height: 1;
 }
@@ -820,7 +820,7 @@ h1{
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background-color: #3898D0;
+    background-color: #5580F4;
     color: #ffffff;
     display: inline-flex;
     align-items: center;
@@ -844,7 +844,7 @@ h1{
     padding: 18px 15px;
     border: none;
     border-radius: 14px;
-    background-color: #3898D0;
+    background-color: #5580F4;
     color: #ffffff;
     font-size: 16px;
     font-weight: 600;
@@ -858,7 +858,7 @@ h1{
 }
 
 .price-card-btn:hover{
-    background-color: #2c7aa8;
+    background-color: #5580F4;
 }
 
 .price-card-btn svg{
@@ -873,12 +873,12 @@ h1{
 
 /* Blue variant (One-Time Implementation) */
 .price-card-blue{
-    background: linear-gradient(135deg, #3898D0 0%, #266d96 70%, #1a3d5c 100%);
+    background: linear-gradient(135deg, #5580F4 0%, #5580F4 70%, #5580F4 100%);
     border-color: transparent;
 }
 
 .price-card-blue:hover{
-    box-shadow: 0 18px 44px rgba(26, 61, 92, 0.35);
+    box-shadow: 0 18px 44px rgba(85, 128, 244, 0.35);
 }
 
 .price-card-blue .price-card-label{
@@ -907,12 +907,12 @@ h1{
 
 .price-card-blue .price-check{
     background-color: #ffffff;
-    color: #3898D0;
+    color: #5580F4;
 }
 
 .price-card-blue .price-card-btn{
     background-color: #ffffff;
-    color: #3898D0;
+    color: #5580F4;
 }
 
 .price-card-blue .price-card-btn:hover{
@@ -927,8 +927,8 @@ h1{
 
 .advantages hr{
     width: 30px;
-    color: #3898D0;
-    border: 2px solid #7ec8ed;
+    color: #5580F4;
+    border: 2px solid #5580F4;
     border-radius: 50px;
     margin-bottom: -10px;
 }
@@ -968,7 +968,7 @@ h1{
     justify-content: space-between;
     gap: 16px;
     background: #ffffff;
-    color: #1a3d5c;
+    color: #5580F4;
     font-size: 19px;
     font-weight: 700;
     line-height: 1.45;
@@ -986,7 +986,7 @@ h1{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #3898D0;
+    background-color: #5580F4;
     color: #ffffff;
     display: inline-flex;
     align-items: center;
@@ -1009,8 +1009,8 @@ h1{
 
 .faq-bubble-answer{
     align-self: center;
-    background: #d9ecf8;
-    color: #1a3d5c;
+    background: #5580F4;
+    color: #ffffff;
     font-size: 15px;
     line-height: 1.65;
     border-bottom-right-radius: 6px;
@@ -1036,7 +1036,7 @@ h1{
     width: 0;
     height: 0;
     border-right: 18px solid transparent;
-    border-top: 16px solid #d9ecf8;
+    border-top: 16px solid #5580F4;
 }
 
 .faq-badge{
@@ -1044,7 +1044,7 @@ h1{
     top: -15px;
     padding: 7px 18px;
     border-radius: 999px;
-    background-color: #3898D0;
+    background-color: #5580F4;
     color: #ffffff;
     font-size: 12px;
     font-weight: 700;
@@ -1059,6 +1059,8 @@ h1{
 
 .faq-badge-answer{
     left: 26px;
+    background-color: #ffffff;
+    color: #5580F4;
 }
 
 .faq-more-btn{
@@ -1067,10 +1069,10 @@ h1{
     gap: 8px;
     margin-top: 44px;
     padding: 14px 36px;
-    border: 2px solid #3898D0;
+    border: 2px solid #ffffff;
     border-radius: 999px;
     background-color: transparent;
-    color: #7ec8ed;
+    color: #ffffff;
     font-size: 15px;
     font-weight: 600;
     font-family: inherit;
@@ -1079,8 +1081,8 @@ h1{
 }
 
 .faq-more-btn:hover{
-    background-color: #3898D0;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #5580F4;
     transform: translateY(-2px);
 }
 
@@ -1107,7 +1109,7 @@ h1{
 .contact-form-card{
     background: #ffffff;
     border-radius: 14px;
-    box-shadow: 0 18px 50px rgba(26, 61, 92, 0.12);
+    box-shadow: 0 18px 50px rgba(85, 128, 244, 0.12);
     flex: 1;
     min-width: 0;
     box-sizing: border-box;
@@ -1121,9 +1123,9 @@ h1{
     flex-shrink: 0;
     width: 300px;
     margin-right: -240px;
-    background: linear-gradient(160deg, #3898D0 0%, #2c7aa8 60%, #1a3d5c 100%);
+    background: linear-gradient(160deg, #5580F4 0%, #5580F4 60%, #5580F4 100%);
     border-radius: 10px;
-    box-shadow: 0 18px 40px rgba(26, 61, 92, 0.3);
+    box-shadow: 0 18px 40px rgba(85, 128, 244, 0.3);
     padding: 42px 32px;
     text-align: left;
     box-sizing: border-box;
@@ -1167,7 +1169,7 @@ h1{
 }
 
 .contact-form-card h2{
-    color: #1a3d5c;
+    color: #5580F4;
     font-size: 30px;
     margin: 0 0 6px;
 }
@@ -1187,7 +1189,7 @@ h1{
     padding: 16px 18px;
     font-size: 14px;
     font-family: inherit;
-    color: #1a3d5c;
+    color: #5580F4;
     margin-bottom: 16px;
     outline: none;
     box-sizing: border-box;
@@ -1198,7 +1200,7 @@ h1{
 }
 
 .contact-field:focus{
-    box-shadow: 0 0 0 2px rgba(56, 152, 208, 0.35);
+    box-shadow: 0 0 0 2px rgba(85, 128, 244, 0.35);
 }
 
 textarea.contact-field{
@@ -1207,7 +1209,7 @@ textarea.contact-field{
 }
 
 .contact-success{
-    color: #27c93f;
+    color: #5580F4;
     font-size: 14px;
     margin: 0 0 16px;
 }
@@ -1216,7 +1218,7 @@ textarea.contact-field{
     padding: 13px 46px;
     border: none;
     border-radius: 999px;
-    background-color: #3898D0;
+    background-color: #5580F4;
     color: #ffffff;
     font-size: 14px;
     font-weight: 700;
@@ -1227,7 +1229,7 @@ textarea.contact-field{
 }
 
 .contact-send-btn:hover{
-    background-color: #2c7aa8;
+    background-color: #5580F4;
     transform: translateY(-2px);
 }
 
@@ -1260,10 +1262,10 @@ textarea.contact-field{
     padding-bottom: 20px;
     background: linear-gradient(
         135deg,
-        #3898D0 0%,
-        #2c7aa8 0%,
-        #266d96 70%,
-        #1a3d5c 100%)
+        #5580F4 0%,
+        #5580F4 0%,
+        #5580F4 70%,
+        #5580F4 100%)
 
 }
 .text{
@@ -1312,7 +1314,7 @@ textarea.contact-field{
 .dashboard-title-bar span{
     font-size: 14px;
     font-weight: 600;
-    color: #1a3d5c;
+    color: #5580F4;
 }
 
 .dashboard-period{
@@ -1325,8 +1327,8 @@ textarea.contact-field{
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #27c93f;
-    box-shadow: 0 0 6px rgba(39,201,63,0.5);
+    background: #5580F4;
+    box-shadow: 0 0 6px rgba(85,128,244,0.5);
     animation: pulse-live 2s ease-in-out infinite;
 }
 
@@ -1353,9 +1355,9 @@ textarea.contact-field{
     border-radius: 50%;
     display: inline-block;
 }
-.dot.red{ background-color: rgb(255,95,86); }
-.dot.yellow{ background-color: rgb(255,189,46); }
-.dot.green{ background-color: rgb(39,201,63); }
+.dot.red{ background-color: #5580F4; }
+.dot.yellow{ background-color: #5580F4; }
+.dot.green{ background-color: #5580F4; }
 
 .dashboard-body{
     padding: 20px 24px 24px;
@@ -1389,17 +1391,17 @@ textarea.contact-field{
 }
 
 .tab:hover{
-    background-color: rgba(56,152,208,0.06);
-    color: #3898D0;
-    border-color: rgba(56,152,208,0.15);
+    background-color: rgba(85,128,244,0.06);
+    color: #5580F4;
+    border-color: rgba(85,128,244,0.15);
 }
 
 .tab.active{
-    background-color: rgba(56,152,208,0.1);
-    color: #3898D0;
+    background-color: rgba(85,128,244,0.1);
+    color: #5580F4;
     font-weight: 600;
-    border-color: rgba(56,152,208,0.25);
-    box-shadow: 0 2px 8px rgba(56,152,208,0.12);
+    border-color: rgba(85,128,244,0.25);
+    box-shadow: 0 2px 8px rgba(85,128,244,0.12);
 }
 
 .tab-icon{
@@ -1442,7 +1444,7 @@ textarea.contact-field{
     padding: 16px 14px;
     transition: all 0.25s ease;
     background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
-    box-shadow: 0 1px 3px rgba(26, 63, 113, 0.05);
+    box-shadow: 0 1px 3px rgba(85, 128, 244, 0.05);
 }
 
 .stat-card:hover{
@@ -1450,10 +1452,10 @@ textarea.contact-field{
     box-shadow: 0 6px 16px rgba(0,0,0,0.06);
 }
 
-.stat-card.blue-edge{ border-left-color: #3898D0; }
-.stat-card.yellow-edge{ border-left-color: rgb(255,189,46); }
-.stat-card.red-edge{ border-left-color: rgb(255,95,86); }
-.stat-card.green-edge{ border-left-color: rgb(39,201,63); }
+.stat-card.blue-edge{ border-left-color: #5580F4; }
+.stat-card.yellow-edge{ border-left-color: #5580F4; }
+.stat-card.red-edge{ border-left-color: #5580F4; }
+.stat-card.green-edge{ border-left-color: #5580F4; }
 
 .stat-card-info{
     display: flex;
@@ -1471,7 +1473,7 @@ textarea.contact-field{
 .stat-card h1{
     font-size: 22px;
     margin: 2px 0;
-    color: #1a3d5c;
+    color: #5580F4;
 }
 
 .trend{
@@ -1483,8 +1485,8 @@ textarea.contact-field{
     margin-top: 2px;
 }
 
-.trend-up{ color: #27c93f; }
-.trend-down{ color: rgb(255,95,86); }
+.trend-up{ color: #5580F4; }
+.trend-down{ color: #5580F4; }
 .trend-neutral{ color: #9ca3af; }
 
 .stat-icon{
@@ -1497,10 +1499,10 @@ textarea.contact-field{
     flex-shrink: 0;
 }
 
-.stat-icon.blue{ background-color: rgba(56,152,208,0.1); color: #3898D0; }
-.stat-icon.yellow{ background-color: rgba(255,189,46,0.1); color: rgb(255,189,46); }
-.stat-icon.red{ background-color: rgba(255,95,86,0.1); color: rgb(255,95,86); }
-.stat-icon.green{ background-color: rgba(39,201,63,0.1); color: rgb(39,201,63); }
+.stat-icon.blue{ background-color: rgba(85,128,244,0.1); color: #5580F4; }
+.stat-icon.yellow{ background-color: rgba(85,128,244,0.1); color: #5580F4; }
+.stat-icon.red{ background-color: rgba(85,128,244,0.1); color: #5580F4; }
+.stat-icon.green{ background-color: rgba(85,128,244,0.1); color: #5580F4; }
 
 .stat-icon svg{
     width: 20px;
@@ -1539,8 +1541,8 @@ textarea.contact-field{
 .chart-badge{
     font-size: 11px;
     font-weight: 600;
-    color: #27c93f;
-    background: rgba(39,201,63,0.1);
+    color: #5580F4;
+    background: rgba(85,128,244,0.1);
     padding: 2px 8px;
     border-radius: 10px;
 }
@@ -1570,7 +1572,7 @@ textarea.contact-field{
 .donut-center strong{
     display: block;
     font-size: 20px;
-    color: #1a3d5c;
+    color: #5580F4;
     font-weight: 700;
 }
 
@@ -1599,9 +1601,9 @@ textarea.contact-field{
     border-radius: 50%;
     display: inline-block;
 }
-.legend-dot.brand{ background-color: #3898D0; }
-.legend-dot.light{ background-color: #7ec8ed; }
-.legend-dot.purple{ background-color: #3898D0; }
+.legend-dot.brand{ background-color: #5580F4; }
+.legend-dot.light{ background-color: #5580F4; }
+.legend-dot.purple{ background-color: #5580F4; }
 
 /* Bar chart v2 */
 .bar-chart-v2{
@@ -1652,12 +1654,12 @@ textarea.contact-field{
     width: 70%;
     max-width: 28px;
     border-radius: 6px 6px 0 0;
-    background: linear-gradient(180deg, #4fabdc 0%, #3898D0 100%);
+    background: linear-gradient(180deg, #5580F4 0%, #5580F4 100%);
     transition: height 0.5s ease;
 }
 
 .bar-v.accent{
-    background: linear-gradient(180deg, #a5dbf5 0%, #7ec8ed 100%);
+    background: linear-gradient(180deg, #5580F4 0%, #5580F4 100%);
 }
 
 .bar-col span{
@@ -1772,12 +1774,12 @@ textarea.contact-field{
     padding: 18px;
     border-radius: 12px;
     border: none;
-    background-color: #3898D0;
+    background-color: #5580F4;
     color: white;
     font-weight: bold;
 }
 .demo-form button:hover{
-    box-shadow: 1px 2px 15px rgb(60, 101, 148);
+    box-shadow: 1px 2px 15px rgba(85, 128, 244, 0.6);
     transition: 0.5s;
     cursor: pointer;
 }
@@ -1797,11 +1799,11 @@ textarea.contact-field{
 
 .demo-card-info{
     padding: 50px 45px;
-    background: linear-gradient(160deg, #3898D0 0%, #2c7aa8 45%, #1a3d5c 100%);
+    background: linear-gradient(160deg, #5580F4 0%, #5580F4 45%, #5580F4 100%);
 }
 
 .demo-card-tag{
-    color: #7ec8ed;
+    color: #5580F4;
     font-size: 14px;
     letter-spacing: 2px;
     margin-bottom: 10px;
@@ -1959,7 +1961,7 @@ textarea.contact-field{
 }
 
 .footer-socials a:hover{
-    background-color: #3898D0;
+    background-color: #5580F4;
     transform: translateY(-3px);
 }
 
@@ -1980,7 +1982,7 @@ textarea.contact-field{
 }
 
 .footer-links a:hover{
-    color: #7ec8ed;
+    color: #5580F4;
 }
 
 .footer-contact a{
@@ -1995,7 +1997,7 @@ textarea.contact-field{
 }
 
 .footer-contact a:hover{
-    color: #7ec8ed;
+    color: #5580F4;
 }
 
 .footer hr{
@@ -2020,7 +2022,7 @@ textarea.contact-field{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #3898D0;
+    color: #5580F4;
     margin-bottom: 12px;
 }
 
@@ -2037,7 +2039,7 @@ textarea.contact-field{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #3898D0;
+    color: #5580F4;
     margin-bottom: 12px;
 }
 
@@ -2054,7 +2056,7 @@ textarea.contact-field{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #3898D0;
+    color: #5580F4;
     margin: 0 auto 12px auto;
     box-shadow: 2px 4px 10px rgba(0,0,0,0.05);
 }
@@ -2075,8 +2077,8 @@ textarea.contact-field{
 }
 
 .third-white-cards:hover{
-    border-left: 2px solid rgb(128, 159, 194);
-    border-right: 2px solid rgb(128, 159, 194);
+    border-left: 2px solid #5580F4;
+    border-right: 2px solid #5580F4;
 
 }
 
@@ -2097,7 +2099,7 @@ textarea.contact-field{
     right: 12px;
     bottom: -20px;
     margin-bottom: 0;
-    box-shadow: 0 2px 8px rgba(26, 61, 92, 0.18);
+    box-shadow: 0 2px 8px rgba(85, 128, 244, 0.18);
 }
 
 .third-white-cards h3{
@@ -2114,7 +2116,7 @@ textarea.contact-field{
 }
 
 .features-toggle-btn{
-    background-color: #3898D0;
+    background-color: #5580F4;
     color: white;
     border: none;
     padding: 12px 28px;
@@ -2125,13 +2127,13 @@ textarea.contact-field{
 }
 
 .features-toggle-btn:hover{
-    background-color: #1a3d5c;
+    background-color: #5580F4;
     transform: translateY(-2px);
 }
 
 .features-toggle-hint{
     font-size: 13px;
-    color: rgb(128, 159, 194);
+    color: #5580F4;
 }
 
 /* ---------- Spinning half-hidden specialty wheel ---------- */
@@ -2172,7 +2174,7 @@ textarea.contact-field{
     margin-top: 0;
     white-space: nowrap;
     cursor: grab;
-    box-shadow: 0 4px 14px rgba(26, 61, 92, 0.25);
+    box-shadow: 0 4px 14px rgba(85, 128, 244, 0.25);
     transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -2201,7 +2203,7 @@ textarea.contact-field{
    on the solid white active pill */
 .wheel-pill.active h3,
 .wheel-pill.active h3 svg{
-    color: #1a3d5c;
+    color: #5580F4;
 }
 
 /* readable emphasis while pointing at any pill */
@@ -2211,7 +2213,7 @@ textarea.contact-field{
 
 .wheel-pill:hover h3,
 .wheel-pill:hover h3 svg{
-    color: #1a3d5c;
+    color: #5580F4;
 }
 
 /* dashed guide ring that spins together with the pills */
@@ -2239,7 +2241,7 @@ textarea.contact-field{
     width: clamp(116px, 25vw, 150px);  /* minimized circle — word may overhang its sides */
     aspect-ratio: 1 / 1;               /* full circle — bottom half hides below the line */
     border-radius: 50%;
-    background: linear-gradient(135deg, #3898d0, #1a3d5c);
+    background: linear-gradient(135deg, #5580F4, #5580F4);
     border: 4px solid rgba(255, 255, 255, 0.85);
     box-shadow: 0 6px 18px rgba(10, 30, 50, 0.45);
     display: flex;
@@ -2268,7 +2270,7 @@ textarea.contact-field{
     border: none;
     cursor: pointer;
     color: #ffffff;
-    background: rgba(56, 152, 208, 0.9);
+    background: rgba(85, 128, 244, 0.9);
     box-shadow: 0 6px 16px rgba(10, 30, 50, 0.35);
     display: flex;
     align-items: center;
@@ -2278,7 +2280,7 @@ textarea.contact-field{
 }
 
 .wheel-arrow:hover{
-    background: #1a3d5c;
+    background: #5580F4;
     transform: scale(1.06);
 }
 
@@ -2344,7 +2346,7 @@ textarea.contact-field{
 .icon-circle-blue{
     width: 48px;
     height: 48px;
-    background-color: #3898D0;
+    background-color: #5580F4;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -2412,7 +2414,7 @@ textarea.contact-field{
         display: flex;
         flex-direction: column;
         width: 100%;
-        background-color: rgb(44, 59, 96);
+        background-color: #5580F4;
         padding: 20px;
         gap: 18px;
         border-radius: 0px 0px 12px 12px;
@@ -2426,7 +2428,7 @@ textarea.contact-field{
     }
 
     .mobile-menu button{
-        background-color: #3898D0;
+        background-color: #5580F4;
         padding: 12px 20px;
         margin-right: 0px;
         margin-left: -8px;
@@ -2859,14 +2861,14 @@ textarea.contact-field{
     top: 0;
     width: 100%;
     height: 0;
-    border-top: 2px dashed rgba(56, 152, 208, 0.45);
+    border-top: 2px dashed rgba(85, 128, 244, 0.45);
     opacity: 0;
     scale: 0 1;
 }
 
 /* hovering a node lights up its own spoke */
 .spider-node:hover .spider-line{
-    border-top-color: rgba(56, 152, 208, 0.95);
+    border-top-color: rgba(85, 128, 244, 0.95);
     border-top-style: solid;
 }
 
@@ -2882,8 +2884,8 @@ textarea.contact-field{
     border-radius: 20px;
     padding: 7px 12px;
     box-shadow:
-        0 2px 6px rgba(26, 63, 113, 0.10),
-        0 8px 18px rgba(26, 63, 113, 0.12);
+        0 2px 6px rgba(85, 128, 244, 0.10),
+        0 8px 18px rgba(85, 128, 244, 0.12);
     white-space: nowrap;
     opacity: 0;
     scale: 0.4;
@@ -2892,12 +2894,12 @@ textarea.contact-field{
 
 /* hover: lift, tint brand blue, glow ring */
 .spider-node:hover .spider-pill{
-    background: #3898D0;
+    background: #5580F4;
     transform: translate(-50%, -50%) rotate(calc(-1 * var(--a))) translateY(-4px) scale(1.06);
     box-shadow:
-        0 0 0 3px rgba(56, 152, 208, 0.18),
-        0 6px 14px rgba(26, 63, 113, 0.18),
-        0 14px 30px rgba(56, 152, 208, 0.35);
+        0 0 0 3px rgba(85, 128, 244, 0.18),
+        0 6px 14px rgba(85, 128, 244, 0.18),
+        0 14px 30px rgba(85, 128, 244, 0.35);
 }
 
 .spider-node:hover .spider-pill h3,
@@ -2930,14 +2932,14 @@ textarea.contact-field{
 .spider-pill h3{
     margin: 0;
     font-size: 12px;
-    color: #1a3d5c;   /* overrides the gray ".second-gray h3" rule */
+    color: #5580F4;   /* overrides the gray ".second-gray h3" rule */
 }
 
 .spider-pill svg{
     width: 14px;
     height: 14px;
     flex-shrink: 0;
-    color: #3898D0;
+    color: #5580F4;
 }
 
 /* central CareCentral hub */
@@ -2949,7 +2951,7 @@ textarea.contact-field{
     width: 110px;
     height: 110px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #3898d0, #1a3d5c);
+    background: linear-gradient(135deg, #5580F4, #5580F4);
     border: 4px solid rgba(255, 255, 255, 0.85);
     box-shadow: 0 8px 22px rgba(10, 30, 50, 0.35);
     display: flex;
@@ -2966,8 +2968,8 @@ textarea.contact-field{
     transform: translate(-50%, -50%) scale(1.06);
     box-shadow:
         inset 0 2px 6px rgba(255, 255, 255, 0.18),
-        0 10px 24px rgba(26, 63, 113, 0.30),
-        0 22px 48px rgba(56, 152, 208, 0.40);
+        0 10px 24px rgba(85, 128, 244, 0.30),
+        0 22px 48px rgba(85, 128, 244, 0.40);
 }
 
 .spider-map.in-view .spider-center{
@@ -3093,11 +3095,11 @@ textarea.contact-field{
     width: 175px;
     height: 175px;
     border-radius: 50%;
-    background: linear-gradient(145deg, #3898d0, #1a3d5c);
+    background: linear-gradient(145deg, #5580F4, #5580F4);
     border: 8px solid #ffffff;
     box-shadow:
         inset 0 2px 6px rgba(255, 255, 255, 0.18),
-        0 16px 36px rgba(26, 63, 113, 0.35);
+        0 16px 36px rgba(85, 128, 244, 0.35);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3130,8 +3132,8 @@ textarea.contact-field{
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.28),
-        0 10px 20px rgba(26, 63, 113, 0.18),
-        0 18px 36px rgba(26, 63, 113, 0.14);
+        0 10px 20px rgba(85, 128, 244, 0.18),
+        0 18px 36px rgba(85, 128, 244, 0.14);
 }
 
 .adv-col.left .adv-block{
@@ -3175,7 +3177,7 @@ textarea.contact-field{
     box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.28),
         0 16px 30px color-mix(in srgb, var(--c) 45%, transparent),
-        0 26px 48px rgba(26, 63, 113, 0.18);
+        0 26px 48px rgba(85, 128, 244, 0.18);
 }
 
 .adv-icon{
@@ -3374,12 +3376,12 @@ textarea.contact-field{
     width: 28.5%;
     aspect-ratio: 1 / 0.92;
     z-index: 2;
-    filter: drop-shadow(0 14px 24px rgba(26, 61, 92, 0.18));
+    filter: drop-shadow(0 14px 24px rgba(85, 128, 244, 0.18));
     transition: filter 0.35s ease;
 }
 
 .hex-tile:hover{
-    filter: drop-shadow(0 24px 38px rgba(26, 61, 92, 0.3));
+    filter: drop-shadow(0 24px 38px rgba(85, 128, 244, 0.3));
 }
 
 .hex-pos-1{ left: 13%;  top: 1%; }
@@ -3393,7 +3395,7 @@ textarea.contact-field{
 .hex-under{
     position: absolute;
     inset: 0;
-    background: var(--hex-accent, #3898d0);
+    background: var(--hex-accent, #5580F4);
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
 
@@ -3418,7 +3420,7 @@ textarea.contact-field{
     margin: 0;
     font-size: clamp(12.5px, 1.6vw, 17px);
     font-weight: 700;
-    color: #1a3d5c;
+    color: #5580F4;
     line-height: 1.15;
 }
 
@@ -3431,7 +3433,7 @@ textarea.contact-field{
 
 .hex-icon{
     margin-top: 3px;
-    color: var(--hex-accent, #3898d0);
+    color: var(--hex-accent, #5580F4);
 }
 
 .hex-icon svg{
@@ -3462,7 +3464,7 @@ textarea.contact-field{
     position: relative;
     width: 27%;
     aspect-ratio: 1 / 0.92;
-    filter: drop-shadow(0 18px 30px rgba(26, 61, 92, 0.22));
+    filter: drop-shadow(0 18px 30px rgba(85, 128, 244, 0.22));
 }
 
 .hex-center-face{
@@ -3480,12 +3482,12 @@ textarea.contact-field{
     font-size: clamp(14px, 2vw, 23px);
     font-weight: 800;
     letter-spacing: 2px;
-    color: #1a3d5c;
+    color: #5580F4;
     line-height: 1.25;
 }
 
 .hex-center-face span b{
-    color: #3898d0;
+    color: #5580F4;
 }
 
 /* hexagon infographic responsive: ring -> vertical stack */
@@ -3538,12 +3540,12 @@ textarea.contact-field{
 
 /* shadow lives on the wrapper so clip-path doesn't clip it */
 .badge-cell{
-    filter: drop-shadow(0 10px 18px rgba(26, 61, 92, 0.16));
+    filter: drop-shadow(0 10px 18px rgba(85, 128, 244, 0.16));
     transition: filter 0.35s ease;
 }
 
 .badge-cell:hover{
-    filter: drop-shadow(0 18px 30px rgba(26, 61, 92, 0.28));
+    filter: drop-shadow(0 18px 30px rgba(85, 128, 244, 0.28));
 }
 
 .badge-card{
@@ -3566,7 +3568,7 @@ textarea.contact-field{
     transform: translateX(-50%);
     width: 58px;
     height: 62px;
-    background: var(--badge-accent, #3898d0);
+    background: var(--badge-accent, #5580F4);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%);
     display: flex;
     align-items: center;
@@ -3586,14 +3588,14 @@ textarea.contact-field{
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 7px solid var(--badge-accent, #3898d0);
+    border-top: 7px solid var(--badge-accent, #5580F4);
 }
 
 .badge-card h2{
     margin: 2px 0 0;
     font-size: 15px;
     font-weight: 700;
-    color: #1a3d5c;
+    color: #5580F4;
     line-height: 1.25;
 }
 

@@ -202,11 +202,11 @@ function Demo(){
             </div>
 
             {status === "error" && (
-                <h3 style={{ color: "rgb(255, 95, 86)", marginBottom: "15px" }}>{errorMessage}</h3>
+                <h3 style={{ color: "#5580F4", marginBottom: "15px" }}>{errorMessage}</h3>
             )}
 
             {status === "success" && (
-                <h3 style={{ color: "rgb(39, 201, 63)", marginBottom: "15px" }}>
+                <h3 style={{ color: "#5580F4", marginBottom: "15px" }}>
                     Thank you! Your demo request has been submitted we'll be in touch soon.
                 </h3>
             )}

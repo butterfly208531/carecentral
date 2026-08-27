@@ -38,8 +38,8 @@ function Question(){
         <>
             <div className='ques'>
                 <hr />
-                <h3 className="reveal" style={{color: "#7ec8ed"}}>FAQ</h3>
-                <div className='title reveal reveal-delay-1'><h1>Frequently Asked <span style={{color: "#7ec8ed"}}> Questions</span></h1></div>
+                <h3 className="reveal" style={{color: "#ffffff"}}>FAQ</h3>
+                <div className='title reveal reveal-delay-1'><h1>Frequently Asked <span style={{color: "#ffffff"}}> Questions</span></h1></div>
                 <h3 className="reveal reveal-delay-2" style={{color: "rgba(255, 255, 255, 0.8)"}}>Everything you need to know about CareCentral.</h3>
                 <div className="ques-grid reveal reveal-stagger reveal-delay-2">
                     {(showAll ? faqs : faqs.slice(0, 3)).map((faq, index) => (
