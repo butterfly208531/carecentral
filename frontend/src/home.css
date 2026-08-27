@@ -1798,63 +1798,69 @@ textarea.contact-field{
 }
 
 .demo-card-info{
-    padding: 50px 45px;
+    padding: 32px 40px;
     background: linear-gradient(160deg, #5580F4 0%, #5580F4 45%, #5580F4 100%);
 }
 
+.demo-card-info hr{
+    width: 25px;
+    color: white;
+    border: 2px solid white;
+}
+
 .demo-card-tag{
-    color: #5580F4;
-    font-size: 14px;
+    color: white;
+    font-size: 13px;
     letter-spacing: 2px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .demo-card-title{
-    color: rgb(224, 240, 255);
-    font-size: 32px;
+    color: white;
+    font-size: 24px;
     line-height: 1.3;
-    margin-top: 12px;
+    margin-top: 8px;
 }
 
 .demo-card-sub{
-    color: rgb(224, 240, 255);
-    font-size: 15px;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 13.5px;
     font-weight: normal;
-    line-height: 1.6;
-    margin-top: 18px;
+    line-height: 1.55;
+    margin-top: 10px;
 }
 
 .demo-card-info .contact-line{
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 18px;
-    margin-top: 28px;
+    gap: 12px 18px;
+    margin-top: 16px;
 }
 
 .demo-card-stats{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-top: 35px;
+    gap: 10px;
+    margin-top: 18px;
 }
 
 .demo-card-stats .stat-box{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 6px;
-    padding: 16px 14px;
+    gap: 3px;
+    padding: 11px 12px;
     background: rgba(255, 255, 255, 0.12);
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .demo-card-stats .stat-box h1{
-    font-size: 20px;
+    font-size: 17px;
     margin: 0;
 }
 
 .demo-card-stats .stat-box h3{
-    font-size: 13px;
+    font-size: 12px;
     font-weight: normal;
     margin: 0;
 }
