@@ -1107,7 +1107,7 @@ h1{
 /* Contact page: overlapping cards */
 .contact-section{
     background: #eaf4fb;
-    padding: 100px 40px;
+    padding: 60px 40px;
 }
 
 .contact-card-wrap{
@@ -1125,7 +1125,7 @@ h1{
     flex: 1;
     min-width: 0;
     box-sizing: border-box;
-    padding: 48px 56px 48px 260px;
+    padding: 34px 40px 34px 240px;
     text-align: left;
 }
 
@@ -1138,15 +1138,15 @@ h1{
     background: linear-gradient(160deg, #5580F4 0%, #5580F4 60%, #5580F4 100%);
     border-radius: 10px;
     box-shadow: 0 18px 40px rgba(85, 128, 244, 0.3);
-    padding: 42px 32px;
+    padding: 30px 24px;
     text-align: left;
     box-sizing: border-box;
 }
 
 .contact-info-card h2{
     color: #ffffff;
-    font-size: 24px;
-    margin: 0 0 30px;
+    font-size: 20px;
+    margin: 0 0 20px;
 }
 
 .contact-info-row{
@@ -1154,9 +1154,9 @@ h1{
     align-items: center;
     gap: 14px;
     color: rgba(255, 255, 255, 0.92);
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.5;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 .contact-info-row:last-child{
@@ -1164,8 +1164,8 @@ h1{
 }
 
 .contact-info-icon{
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.16);
     color: #ffffff;
@@ -1176,20 +1176,20 @@ h1{
 }
 
 .contact-info-icon svg{
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
 }
 
 .contact-form-card h2{
     color: #5580F4;
-    font-size: 30px;
+    font-size: 24px;
     margin: 0 0 6px;
 }
 
 .contact-form-sub{
     color: #8a94a0;
-    font-size: 14px;
-    margin: 0 0 28px;
+    font-size: 13px;
+    margin: 0 0 18px;
 }
 
 .contact-field{
@@ -1198,11 +1198,11 @@ h1{
     background: #f4f6f9;
     border: none;
     border-radius: 10px;
-    padding: 16px 18px;
+    padding: 12px 14px;
     font-size: 14px;
     font-family: inherit;
     color: #5580F4;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     outline: none;
     box-sizing: border-box;
 }
@@ -1216,7 +1216,7 @@ h1{
 }
 
 textarea.contact-field{
-    min-height: 150px;
+    min-height: 110px;
     resize: vertical;
 }
 
@@ -1227,7 +1227,7 @@ textarea.contact-field{
 }
 
 .contact-send-btn{
-    padding: 13px 46px;
+    padding: 11px 36px;
     border: none;
     border-radius: 999px;
     background-color: #5580F4;
