@@ -1810,21 +1810,21 @@ textarea.contact-field{
 
 .demo-card-tag{
     color: white;
-    font-size: 13px;
+    font-size: 11px;
     letter-spacing: 2px;
     margin-bottom: 8px;
 }
 
 .demo-card-title{
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.3;
     margin-top: 8px;
 }
 
 .demo-card-sub{
     color: rgba(255, 255, 255, 0.92);
-    font-size: 13.5px;
+    font-size: 12.5px;
     font-weight: normal;
     line-height: 1.55;
     margin-top: 10px;
@@ -1835,6 +1835,10 @@ textarea.contact-field{
     flex-wrap: wrap;
     gap: 12px 18px;
     margin-top: 16px;
+}
+
+.demo-card-info .contact-line span{
+    font-size: 13px;
 }
 
 .demo-card-stats{
@@ -1855,12 +1859,12 @@ textarea.contact-field{
 }
 
 .demo-card-stats .stat-box h1{
-    font-size: 17px;
+    font-size: 15px;
     margin: 0;
 }
 
 .demo-card-stats .stat-box h3{
-    font-size: 12px;
+    font-size: 11px;
     font-weight: normal;
     margin: 0;
 }
