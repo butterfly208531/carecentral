@@ -172,13 +172,13 @@ h1{
 .made-for-eth{
     margin-bottom: 70px;
     color: #5580F4;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: rgb(255, 255, 255);
-    border: 1px solid rgba(85, 128, 244, 0.35);  
+    background-color: white;
+    border: 1px solid white;
     width: 350px;
-    padding: 5px;
-    padding-left: 20px;
+    padding: 10px 20px;
     border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(8, 35, 65, 0.25);
 }
 
 .made-for-eth span{
