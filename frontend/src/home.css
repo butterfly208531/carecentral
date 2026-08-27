@@ -1875,7 +1875,7 @@ textarea.contact-field{
 
 /* --- footer --- */
 .footer{
-    background-color: rgb(20, 27, 45);
+    background-color: #5580F4;
     padding: 70px 50px 30px;
 }
 
@@ -1933,7 +1933,7 @@ textarea.contact-field{
 }
 
 .footer-brand h3{
-    color: rgb(148, 163, 184);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 14px;
     font-weight: normal;
     line-height: 1.7;
@@ -1948,7 +1948,7 @@ textarea.contact-field{
 
 .footer-socials a{
     text-decoration: none;
-    background-color: rgb(40, 48, 68);
+    background-color: rgba(255, 255, 255, 0.2);
     color: white;
     width: 36px;
     height: 36px;
@@ -1961,12 +1961,13 @@ textarea.contact-field{
 }
 
 .footer-socials a:hover{
-    background-color: #5580F4;
+    background-color: white;
+    color: #5580F4;
     transform: translateY(-3px);
 }
 
 .footer-links h4, .footer-contact h4{
-    color: rgb(148, 163, 184);
+    color: rgba(255, 255, 255, 0.75);
     font-size: 12px;
     letter-spacing: 2px;
     margin-bottom: 18px;
@@ -1974,7 +1975,7 @@ textarea.contact-field{
 
 .footer-links a{
     display: block;
-    color: rgb(224, 240, 255);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 14px;
     margin-bottom: 12px;
     text-decoration: none;
@@ -1982,14 +1983,15 @@ textarea.contact-field{
 }
 
 .footer-links a:hover{
-    color: #5580F4;
+    color: white;
+    text-decoration: underline;
 }
 
 .footer-contact a{
     display: flex;
     align-items: center;
     gap: 8px;
-    color: rgb(224, 240, 255);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 14px;
     margin-bottom: 12px;
     text-decoration: none;
@@ -1997,17 +1999,17 @@ textarea.contact-field{
 }
 
 .footer-contact a:hover{
-    color: #5580F4;
+    color: white;
 }
 
 .footer hr{
     border: none;
-    border-top: 1px solid rgb(40, 48, 68);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
     margin: 10px 0px 25px;
 }
 
 .copyright{
-    color: rgb(148, 163, 184);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 12.5px;
     text-align: center;
 }
