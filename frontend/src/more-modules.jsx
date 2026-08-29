@@ -3,6 +3,28 @@ import "./more-module.css";
 import { HashLink } from "react-router-hash-link";
 
 // ---------------------------------------------------------------------------
+// Simplified world map — decorative backdrop for the dark modules section
+// (drawn in the brand color only; hidden from screen readers)
+// ---------------------------------------------------------------------------
+function WorldMap() {
+  return (
+    <svg viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="#5580F4">
+        <path d="M60 90 Q90 55 150 60 Q210 55 245 80 Q280 95 275 130 Q270 160 240 175 Q225 205 195 215 Q165 230 150 205 Q120 195 100 170 Q70 150 65 120 Z" />
+        <path d="M300 40 Q330 30 350 45 Q360 65 340 80 Q315 88 300 70 Z" />
+        <path d="M235 245 Q270 230 295 255 Q315 285 305 325 Q295 370 275 405 Q260 430 248 405 Q235 370 232 330 Q222 285 235 245 Z" />
+        <path d="M455 80 Q490 60 525 70 Q555 80 550 105 Q540 130 510 140 Q480 150 460 135 Q445 110 455 80 Z" />
+        <path d="M460 175 Q500 160 540 175 Q575 190 570 230 Q565 270 545 305 Q530 345 505 360 Q485 345 475 310 Q455 270 452 230 Q448 195 460 175 Z" />
+        <path d="M570 70 Q640 45 720 55 Q800 60 850 90 Q890 115 875 155 Q855 195 805 205 Q775 230 735 225 Q700 240 670 220 Q640 205 615 180 Q580 150 570 110 Z" />
+        <path d="M660 230 Q685 225 695 250 Q700 280 685 305 Q668 295 660 265 Z" />
+        <path d="M760 250 Q790 245 805 265 Q795 285 770 280 Q755 268 760 250 Z" />
+        <path d="M790 330 Q830 315 870 330 Q895 350 885 380 Q860 400 825 395 Q795 385 790 360 Z" />
+      </g>
+    </svg>
+  );
+}
+
+// ---------------------------------------------------------------------------
 // MODULE DATA — add/edit a module by adding/editing an object here.
 // category must be one of: "clinical" | "speciality" | "administrative"
 // ---------------------------------------------------------------------------
@@ -555,11 +577,23 @@ function MoreModules() {
           Contact Sales
         </HashLink>
       </div>
-      <div className="module-hero">
-        <hr />
-        <h3 className="reveal" style={{ color: "white" }}>ALL MODULES</h3>
-        <h1 className="reveal reveal-delay-1">Every Modle. One Platform.</h1>
-        <h2 className="reveal reveal-delay-2">
+      <div className="modules-dark">
+        <div className="world-map" aria-hidden="true">
+          <WorldMap />
+        </div>
+        <div className="module-hero">
+          <h3 className="reveal">ALL MODULES</h3>
+          <h1 className="reveal reveal-delay-1">
+            Every Module. <span className="hero-bold">One Platform.</span>
+          </h1>
+          <div className="hero-dots reveal reveal-delay-2">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <h2 className="reveal reveal-delay-2">
           CareCentral is fully modular start with what you need and expand at
           your own pace. All modules share the same patient database,
           eliminating duplicate data entry.
@@ -607,40 +641,41 @@ function MoreModules() {
 
       <div className="module-grid reveal reveal-stagger" id="my-cards">
         {filteredModules.map((module) => (
-          <div className="module-cards" key={module.id}>
-            <div className="icons">
-              <div className="available">
-              </div>
+          <div className="pin-card" key={module.id}>
+            <div className="pin-badge">
+              <span className="pin-icon">{module.icon}</span>
             </div>
+            <div className="pin-card-body">
+              <span className="name">{module.categoryLabel}</span>
+              <h4 className="pin-title">{module.title}</h4>
             
-            <div className="icon-title">
-            <span className="icon">{module.icon}</span>
-            <h4 className="module-title">{module.title}</h4>
-          </div>
-            <h3 style={{ color: "rgb(100, 101, 105)" }}>{module.description}</h3>
-            <h5 style={{ color: "gray", marginTop: "30px", marginBottom: "3px" }}>
-              INCLUDES
-            </h5>
             <div className="text-grids">
               <div>
                 {module.includes[0].map((item) => (
-                  <h2 key={item}>✓ {item}</h2>
+                  <span className="feature" key={item}>
+                    ✓ {item}
+                  </span>
                 ))}
               </div>
               <div>
                 {module.includes[1].map((item) => (
-                  <h2 key={item}>✓ {item}</h2>
+                  <span className="feature" key={item}>
+                    ✓ {item}
+                  </span>
                 ))}
               </div>
             </div>
+            </div>
+            <div className="pin-stand"></div>
           </div>
         ))}
       </div>
+      </div>
 
       <div className="bottom">
-        <h1 className="reveal" style={{ color: "white" }}>Ready to Get Started?</h1>
+        <h1 className="reveal">Ready to Get Started?</h1>
         <h2 className="reveal reveal-delay-1">
-          Talk to our team to find the right module mix for your facility.          facility.
+          Talk to our team to find the right module mix for your facility.
         </h2>
 
         <div className="bottom-buttons reveal reveal-stagger reveal-delay-2">
