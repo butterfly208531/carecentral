@@ -2061,7 +2061,7 @@ textarea.contact-field{
     display: grid;
     grid-template-columns: 1fr;
     max-width: 760px;
-    margin: 28px auto 45px auto;
+    margin: 20px auto 36px auto;
     border-radius: 24px;
     overflow: hidden;
     background-color: white;
@@ -2079,7 +2079,7 @@ textarea.contact-field{
 .demo-card-info{
     position: relative;
     overflow: hidden;
-    padding: 46px 48px 44px;
+    padding: 30px 40px 26px;
     text-align: center;
     background: linear-gradient(150deg, #2b409c 0%, #5580F4 45%, #6f9bff 100%);
     z-index: 1;
@@ -2128,7 +2128,7 @@ textarea.contact-field{
     border: none;
     border-radius: 999px;
     background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0.25));
-    margin: 0 auto 14px;
+    margin: 0 auto 12px;
 }
 
 .demo-card-tag{
@@ -2137,7 +2137,7 @@ textarea.contact-field{
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2.4px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     padding: 6px 14px;
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.14);
@@ -2147,7 +2147,7 @@ textarea.contact-field{
 
 .demo-card-title{
     color: white;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 800;
     line-height: 1.25;
     margin: 2px auto 0;
@@ -2157,27 +2157,27 @@ textarea.contact-field{
 
 .demo-card-sub{
     color: rgba(255, 255, 255, 0.94);
-    font-size: 14px;
+    font-size: 13px;
     font-weight: normal;
-    line-height: 1.6;
-    margin: 10px auto 0;
+    line-height: 1.55;
+    margin: 8px auto 0;
     max-width: 580px;
 }
 
 .demo-card-info .contact-line{
     justify-content: center;
     flex-wrap: wrap;
-    gap: 12px 18px;
-    margin-top: 20px;
+    gap: 10px 16px;
+    margin-top: 14px;
 }
 
 .demo-card-info .contact-line span{
     display: inline-flex;
     align-items: center;
     white-space: nowrap;
-    padding: 7px 14px;
+    padding: 6px 12px;
     border-radius: 999px;
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 500;
     background: rgba(255, 255, 255, 0.12);
     border: 1px solid rgba(255, 255, 255, 0.22);
@@ -2193,9 +2193,9 @@ textarea.contact-field{
 .demo-card-stats{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin: 24px auto 0;
-    max-width: 620px;
+    gap: 10px;
+    margin: 16px auto 0;
+    max-width: 560px;
 }
 
 .demo-card-stats .stat-box{
@@ -2204,8 +2204,8 @@ textarea.contact-field{
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 4px;
-    padding: 16px 14px;
+    gap: 3px;
+    padding: 12px 12px;
     background: rgba(255, 255, 255, 0.12);
     border: 1px solid rgba(255, 255, 255, 0.18);
     backdrop-filter: blur(4px);
@@ -2219,7 +2219,7 @@ textarea.contact-field{
 }
 
 .demo-card-stats .stat-box h1{
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 800;
     margin: 0;
     background: linear-gradient(180deg, #ffffff, #cfe0ff);
@@ -2230,7 +2230,7 @@ textarea.contact-field{
 }
 
 .demo-card-stats .stat-box h3{
-    font-size: 11.5px;
+    font-size: 11px;
     font-weight: normal;
     margin: 0;
     color: rgba(224, 240, 255, 0.95);
@@ -2238,7 +2238,7 @@ textarea.contact-field{
 
 .demo-card-form-panel{
     position: relative;
-    padding: 40px 48px;
+    padding: 28px 40px;
     background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
 }
 
@@ -2260,30 +2260,34 @@ textarea.contact-field{
 }
 
 .demo-card-form-panel .form-row{
-    gap: 28px;
+    gap: 20px;
     margin-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     align-items: end;
     text-align: left;
 }
 
 .demo-card-form-panel .form-group h4,
 .demo-card-form-panel .form-group-full h4{
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .demo-card-form-panel .form-group input,
 .demo-card-form-panel .form-group-full textarea{
     box-sizing: border-box;
     width: 100%;
-    padding: 13px 14px;
+    padding: 10px 12px;
     border-radius: 10px;
+}
+
+.demo-card-form-panel .form-group-full textarea{
+    height: 52px;
 }
 
 .demo-card-form-panel .demo-form h2{
     font-size: 22px;
     font-weight: 800;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     background: linear-gradient(90deg, #2452c4, #5580F4, #7a5cff);
     -webkit-background-clip: text;
     background-clip: text;
@@ -2293,7 +2297,7 @@ textarea.contact-field{
 
 .demo-card-form-panel .demo-form h3{
     color: gray;
-    margin-bottom: 22px;
+    margin-bottom: 16px;
 }
 
 .demo-card-form-panel .form-group input,
@@ -2311,8 +2315,8 @@ textarea.contact-field{
 
 .demo-card-form-panel .demo-form button{
     width: 100%;
-    margin: 16px auto 0;
-    padding: 14px;
+    margin: 12px auto 0;
+    padding: 12px;
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 0.3px;
