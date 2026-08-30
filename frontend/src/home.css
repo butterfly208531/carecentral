@@ -126,7 +126,7 @@ h1{
     padding-left: 40px;
     padding-bottom: 80px;
     color: rgb(255, 255, 255);
-    background: linear-gradient(160deg, #0e1b4d 0%, #1c2f77 45%, #2a4bb5 100%);
+    background: #5580F4;
 }
 .hero::before{
     content: "";
@@ -766,7 +766,7 @@ h1{
     position: relative;
     overflow: hidden;
     padding: 28px 28px 26px;
-    background: linear-gradient(150deg, #2b409c 0%, #5580F4 55%, #6f9bff 100%);
+    background: #5580F4;
 }
 
 .price-card-head::before{
@@ -893,7 +893,7 @@ h1{
     padding: 13px 15px;
     border: none;
     border-radius: 12px;
-    background: linear-gradient(90deg, #5580F4 0%, #6f5ef4 100%);
+    background: #5580F4;
     color: #ffffff;
     font-size: 14.5px;
     font-weight: 700;
@@ -908,7 +908,7 @@ h1{
 }
 
 .price-card-btn:hover{
-    background: linear-gradient(90deg, #5580F4 0%, #6f5ef4 100%);
+    background: #5580F4;
     transform: translateY(-2px);
     box-shadow: 0 12px 30px rgba(85, 128, 244, 0.45);
     filter: brightness(1.06);
@@ -1313,11 +1313,7 @@ textarea.contact-field{
 .final{
     padding-top: 30px;
     padding-bottom: 30px;
-    background: linear-gradient(
-        160deg,
-        #0e1b4d 0%,
-        #1c2f77 45%,
-        #2a4bb5 100%);
+    background: #5580F4;
 }
 .text{
     display: flex;
@@ -2120,7 +2116,7 @@ textarea.contact-field{
     overflow: hidden;
     padding: 30px 40px 26px;
     text-align: center;
-    background: linear-gradient(150deg, #2b409c 0%, #5580F4 45%, #6f9bff 100%);
+    background: #5580F4;
     z-index: 1;
 }
 
@@ -2288,7 +2284,7 @@ textarea.contact-field{
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #2b409c, #5580F4, #7a5cff);
+    background: #5580F4;
 }
 
 .demo-card-form-panel .demo-form{
@@ -2327,7 +2323,7 @@ textarea.contact-field{
     font-size: 22px;
     font-weight: 800;
     margin-bottom: 4px;
-    background: linear-gradient(90deg, #2452c4, #5580F4, #7a5cff);
+    background: #5580F4;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -2361,7 +2357,7 @@ textarea.contact-field{
     letter-spacing: 0.3px;
     border: none;
     border-radius: 12px;
-    background: linear-gradient(90deg, #5580F4 0%, #6f5ef4 100%);
+    background: #5580F4;
     color: white;
     cursor: pointer;
     box-shadow: 0 8px 22px rgba(85, 128, 244, 0.35);
