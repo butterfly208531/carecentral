@@ -126,10 +126,7 @@ h1{
     padding-left: 40px;
     padding-bottom: 80px;
     color: rgb(255, 255, 255);
-    background-image: url('/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(160deg, #0e1b4d 0%, #1c2f77 45%, #2a4bb5 100%);
 }
 .hero::before{
     content: "";
