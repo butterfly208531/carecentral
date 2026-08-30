@@ -607,24 +607,25 @@ function Home(){
                         </div>
                         <div className="dashboard-period">
                             <span className="live-dot"></span>
-                            <span className="period-label">Today</span>
+                            <span className="period-label">All Time</span>
                         </div>
                     </div>
 
                     <div className="dashboard-body">
-                        <div className="dashboard-tabs">
+                        <div className="dashboard-sidebar">
                             {tabs.map((tab) => (
                                 <button
                                     key={tab.label}
-                                    className={`tab ${activeTab === tab.label ? "active" : ""}`}
+                                    className={`side-nav ${activeTab === tab.label ? "active" : ""}`}
                                     onClick={() => setActiveTab(tab.label)}
                                 >
-                                    <span className="tab-icon">{tab.icon}</span>
+                                    <span className="side-nav-icon">{tab.icon}</span>
                                     {tab.label}
                                 </button>
                             ))}
                         </div>
 
+                        <div className="dashboard-main">
                         <div className="stat-cards">
                             <div className="stat-card blue-edge">
                                 <div className="stat-card-info">
@@ -751,6 +752,7 @@ function Home(){
                                     <span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span>
                                 </div>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
