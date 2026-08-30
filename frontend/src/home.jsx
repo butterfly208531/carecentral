@@ -605,32 +605,25 @@ function Home(){
                     </div>
 
                     <div className="dashboard-body">
-                        <h2>Health Management Dashboard</h2>
-                        <div className="dashboard-tabs">
+                        <div className="dashboard-sidebar">
                             {tabs.map((tab) => (
                                 <button
                                     key={tab.label}
-                                    className={`tab ${activeTab === tab.label ? "active" : ""}`}
+                                    className={`side-nav ${activeTab === tab.label ? "active" : ""}`}
                                     onClick={() => setActiveTab(tab.label)}
                                 >
+                                    <span className="side-nav-icon">{tab.icon}</span>
                                     {tab.label}
                                 </button>
                             ))}
+                        </div>
+
+                        <div className="dashboard-main">
+                        <div className="dashboard-main-header">
+                            <h2>Health Management Dashboard</h2>
                             <select className="time-select">
                                 <option>All Time</option>
                             </select>
-                        </div>
-                        <div className="dashboard-tabs-second">
-                            {tabs.filter((t) => ["Dental", "Ophthalmology", "Fleet", "Fees"].includes(t.label)).map((tab) => (
-                                <button
-                                    key={tab.label}
-                                    className={`tab ${activeTab === tab.label ? "active" : ""}`}
-                                    onClick={() => setActiveTab(tab.label)}
-                                >
-                                    <span className="tab-icon">{tab.icon}</span>
-                                    {tab.label}
-                                </button>
-                            ))}
                         </div>
                         <div className="stat-cards">
                             <div className="stat-card blue-edge">
@@ -700,6 +693,7 @@ function Home(){
                                     <span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span>
                                 </div>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
