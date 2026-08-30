@@ -15,6 +15,13 @@ import icuImage from './assets/icu.jpg';
 import integrationImage from './assets/integration.jpg';
 import { Link } from "react-router-dom";
 
+const heroShots = [
+    "https://i.pinimg.com/736x/1d/97/08/1d9708ea8fe096151dc63cb70b0ebcda.jpg",
+    "https://i.pinimg.com/1200x/06/10/b8/0610b8dcf256bf6e3d289cc3fad2dc8d.jpg",
+    "https://i.pinimg.com/736x/39/f8/7c/39f87cdea04631c76249c04daed3dcdd.jpg",
+    "https://i.pinimg.com/736x/cb/ba/74/cbba740b72069803d8ff03952553acb3.jpg",
+];
+
 const UNSPLASH = (id) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=600&q=80`;
 
 const specialtyModules = [
@@ -519,21 +526,13 @@ function Home(){
             const timer = setTimeout(reveal, 2500); /* fallback: never leave pills hidden */
             return () => { observer.disconnect(); clearTimeout(timer); };
         }, []);
-        const [activeTab, setActiveTab] = useState("Overview");
         const [showAllFeatures, setShowAllFeatures] = useState(false);
-        const tabs = [
-            {label:"Overview", icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>},
-            {label:"Laboratory", icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 3v7.2L4.7 18c-.8 1.4.2 3 1.8 3h11c1.6 0 2.6-1.6 1.8-3L15 10.2V3"/><line x1="9" y1="3" x2="15" y2="3"/><line x1="7.5" y1="14" x2="16.5" y2="14"/></svg>},
-            {label:"Pharmacy", icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="8" width="18" height="8" rx="4"/><line x1="12" y1="8" x2="12" y2="16"/></svg>},
-            {label:"Radiology", icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="3" x2="12" y2="9"/><line x1="12" y1="15" x2="12" y2="21"/></svg>},
-            {label:"Physiotherapy", icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>},
-            {label:"Gynecology", icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="5"/><line x1="12" y1="13" x2="12" y2="22"/><line x1="9" y1="19" x2="15" y2="19"/></svg>},
-            {label:"ENT", icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0"/><line x1="12.5" y1="18.5" x2="13" y2="22"/></svg>},
-            {label:"Dental", icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2C8 2 5 5 5 9c0 2.5.5 4 1.5 6.5S8 20 9 22c.5-2 1.5-3 3-3s2.5 1 3 3c1-2 1.5-4.5 2.5-6.5S19 11.5 19 9c0-4-3-7-7-7z"/></svg>},
-            {label:"Ophthalmology", icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>},
-            {label:"Fleet", icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="6" width="15" height="10" rx="2"/><path d="M16 10h4l3 3v3h-7V10z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>},
-            {label:"Fees", icon:<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>}
-        ];
+        const [heroIdx, setHeroIdx] = useState(0);
+
+        useEffect(() => {
+            const timer = setInterval(() => setHeroIdx((i) => (i + 1) % heroShots.length), 4000);
+            return () => clearInterval(timer);
+        }, []);
     return (
         <>
             <div className = "Navigation-bar">
@@ -593,111 +592,27 @@ function Home(){
                     <span>✓ Cloud & On-Premise</span>
                 </div>
 
-                <div className="box">
-                <div className="dashboard reveal reveal-zoom reveal-delay-4">
-                    <div className="dashboard-top">
-                        <span className="back-arrow">‹</span>
-                        <div className="win-dots">
-                            <span className="dot red"></span>
-                            <span className="dot yellow"></span>
-                            <span className="dot green"></span>
-                        </div>
+<div className="hero-showcase reveal reveal-zoom reveal-delay-4">
+                    <div
+                        className="hero-showcase-track"
+                        style={{ transform: `translateX(-${heroIdx * 100}%)` }}
+                    >
+                        {heroShots.map((src, i) => (
+                            <div className="hero-showcase-slide" key={src}>
+                                <img src={src} alt={`Healthcare showcase ${i + 1}`} />
+                            </div>
+                        ))}
                     </div>
-
-                    <div className="dashboard-body">
-                        <div className="dashboard-sidebar">
-                            {tabs.map((tab) => (
-                                <button
-                                    key={tab.label}
-                                    className={`side-nav ${activeTab === tab.label ? "active" : ""}`}
-                                    onClick={() => setActiveTab(tab.label)}
-                                >
-                                    <span className="side-nav-icon">{tab.icon}</span>
-                                    {tab.label}
-                                </button>
-                            ))}
-                        </div>
-
-                        <div className="dashboard-main">
-                        <div className="dashboard-main-header">
-                            <h2>Health Management Dashboard</h2>
-                            <select className="time-select">
-                                <option>All Time</option>
-                            </select>
-                        </div>
-                        <div className="stat-cards">
-                            <div className="stat-card blue-edge">
-                                <div>
-                                    <h4>TOTAL PATIENTS</h4>
-                                    <h1>3</h1>
-                                </div>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="gray" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                            </div>
-                            <div className="stat-card yellow-edge">
-                                <div>
-                                    <h4>ADMITTED TODAY</h4>
-                                    <h1>1</h1>
-                                </div>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="gray" strokeWidth="2"><path d="M2 20v-7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v7"/><path d="M2 13V7a2 2 0 0 1 2-2h6v8"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
-                            </div>
-                            <div className="stat-card red-edge">
-                                <div>
-                                    <h4>APPOINTMENTS TODAY</h4>
-                                    <h1>0</h1>
-                                </div>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="gray" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                            </div>
-                            <div className="stat-card green-edge">
-                                <div>
-                                    <h4>TOTAL EARNINGS</h4>
-                                    <h1>Birr 0.00</h1>
-                                </div>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="gray" strokeWidth="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.5c0-1-1.3-1.8-3-1.8s-3 .8-3 2 1.3 1.6 3 1.8 3 .8 3 2-1.3 2-3 2-3-.8-3-1.8"/></svg>
-                            </div>
-                        </div>
-
-                        <div className="chart-row">
-                            <div className="chart-box">
-                                <h3>Patient Gender Distribution</h3>
-                                <div className="pie"></div>
-                                <div className="legend">
-                                    <span className="legend-dot purple"></span>
-                                    Male
-                                </div>
-                            </div>
-
-                            <div className="chart-box">
-                                <h3>Admissions by Department</h3>
-                                <div className="bar-chart">
-                                    <div className="y-axis">
-                                        <span>1.0</span><span>0.8</span><span>0.6</span><span>0.4</span><span>0.2</span>
-                                    </div>
-                                    <div className="bar-area">
-                                        <div className="bar"></div>
-                                    </div>
-                                </div>
-                                <div className="x-axis-single">Eye</div>
-                            </div>
-
-                            <div className="chart-box">
-                                <h3>Appointments (Last 6 Months)</h3>
-                                <div className="line-chart">
-                                    <div className="y-axis">
-                                        <span>1.0</span><span>0.8</span><span>0.6</span><span>0.4</span><span>0.2</span>
-                                    </div>
-                                    <div className="line-area">
-                                        <div className="flat-line"></div>
-                                    </div>
-                                </div>
-                                <div className="x-axis-months">
-                                    <span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
+                    <div className="hero-showcase-dots">
+                        {heroShots.map((_, i) => (
+                            <span
+                                key={i}
+                                className={`hero-dot ${heroIdx === i ? "active" : ""}`}
+                                onClick={() => setHeroIdx(i)}
+                            ></span>
+                        ))}
                     </div>
                 </div>
-            </div>
             </div>
 
             <div className='white'>
