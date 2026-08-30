@@ -2240,19 +2240,37 @@ textarea.contact-field{
 }
 
 .demo-card-form-panel .form-row{
-    gap: 24px;
+    gap: 28px;
     margin-right: 0;
+    margin-bottom: 20px;
+    align-items: end;
+}
+
+.demo-card-form-panel .form-group h4,
+.demo-card-form-panel .form-group-full h4{
+    margin-bottom: 8px;
+}
+
+.demo-card-form-panel .form-group input,
+.demo-card-form-panel .form-group-full textarea{
+    padding: 13px 14px;
+    border-radius: 10px;
 }
 
 .demo-card-form-panel .demo-form h2{
     font-size: 22px;
     font-weight: 800;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     background: linear-gradient(90deg, #2452c4, #5580F4, #7a5cff);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+}
+
+.demo-card-form-panel .demo-form h3{
+    color: gray;
+    margin-bottom: 22px;
 }
 
 .demo-card-form-panel .form-group input,
@@ -2270,7 +2288,7 @@ textarea.contact-field{
 
 .demo-card-form-panel .demo-form button{
     width: 100%;
-    margin: 6px auto 0;
+    margin: 16px auto 0;
     padding: 14px;
     font-size: 15px;
     font-weight: 700;
