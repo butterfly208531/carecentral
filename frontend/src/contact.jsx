@@ -43,7 +43,7 @@ function Contact() {
                                 <path d="m22 7-10 6L2 7" />
                             </svg>
                         </span>
-                        <span>beltechsolns@gmail.com</span>
+                        <span>carecentralsupport@gmail.com</span>
                     </div>
                     <div className="contact-info-row">
                         <span className="contact-info-icon">

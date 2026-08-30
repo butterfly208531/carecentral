@@ -93,7 +93,7 @@ function Demo(){
                     </h3>
                     <div className="contact-line">
                         <span>📞 +251 955935455</span>
-                        <span>✉ beltechsolns@gmail.com</span>
+                        <span>✉ carecentralsupport@gmail.com</span>
                         <span>➤ @belTechSolns</span>
                     </div>
 

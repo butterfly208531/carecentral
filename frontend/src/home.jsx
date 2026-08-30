@@ -1023,7 +1023,7 @@ function Home(){
                     ➤
                     </a>
 
-                    <a href="mailto:beltechsolns@gmail.com">
+                    <a href="mailto:carecentralsupport@gmail.com">
                         
                     ✉
                     </a>
@@ -1042,12 +1042,12 @@ function Home(){
         <div className="footer-links">
             <h4>RESOURCES</h4>
             <Link to="/more-modules">Documentation</Link>
-            <a href="mailto:beltechsolns@gmail.com?subject=Privacy%20Policy%20Request">Privacy Policy</a>
-            <a href="mailto:beltechsolns@gmail.com?subject=Terms%20of%20Service%20Request">Terms of Service</a>
+            <a href="mailto:carecentralsupport@gmail.com?subject=Privacy%20Policy%20Request">Privacy Policy</a>
+            <a href="mailto:carecentralsupport@gmail.com?subject=Terms%20of%20Service%20Request">Terms of Service</a>
         </div>
         <div className="footer-contact">
             <h4>CONTACT</h4>
-            <a href="mailto:beltechsolns@gmail.com">✉ beltechsolns@gmail.com</a>
+            <a href="mailto:carecentralsupport@gmail.com">✉ carecentralsupport@gmail.com</a>
             <a href="tel:+251955935455">📞 +251 95 593 5455</a>
         </div>
     </div>
