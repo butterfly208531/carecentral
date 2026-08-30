@@ -91,26 +91,6 @@ function Demo(){
                     <h3 className="demo-card-sub">
                         Schedule a personalized demo and see how CareCentral can transform patient care, streamline operations, and bring your facility into the digital era.
                     </h3>
-                    <div className="contact-line">
-                        <span>📞 +251 955935455</span>
-                        <span>✉ carecentralsupport@gmail.com</span>
-                        <span>➤ @belTechSolns</span>
-                    </div>
-
-                    <div className="demo-card-stats">
-                        <div className="stat-box">
-                            <h1>48h</h1>
-                            <h3>Average setup time</h3>
-                        </div>
-                        <div className="stat-box">
-                            <h1>100%</h1>
-                            <h3>Local support team</h3>
-                        </div>
-                        <div className="stat-box">
-                            <h1>5 months</h1>
-                            <h3>Free post-launch support</h3>
-                        </div>
-                    </div>
                 </div>
 
                 {/* Right panel: demo request form */}
