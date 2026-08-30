@@ -21,10 +21,6 @@ function Price(){
         section.scrollIntoView({ behavior: "smooth" });
         };
 
-    const goToDemo = () => {
-        window.location.href = "/demo";
-    };
-
     const saasFeatures = [
         "Patient Management",
         "Appointment Scheduling",
@@ -35,17 +31,6 @@ function Price(){
         "5 Months Free Support",
         "Email & Telegram Support",
         "Regular Updates",
-    ];
-
-    const implementationFeatures = [
-        "Full Installation & Configuration",
-        "Staff Training & Go-Live Support",
-        "All Core Modules",
-        "On-Premise or Cloud Setup",
-        "Custom Configuration",
-        "5 Months Free Support",
-        "Data Migration Assistance",
-        "Dedicated Implementation Team",
     ];
 
     return (<>
@@ -76,30 +61,6 @@ function Price(){
                             </ul>
                             <button className="price-card-btn" onClick={scrollToDemo}>
                                 Get started
-                                <ArrowIcon />
-                            </button>
-                        </div>
-
-                        <div className = "price-card price-card-blue">
-                            <div className="price-card-top">
-                                <span className="price-card-label">One-Time Implementation</span>
-                            </div>
-                            <div className="price-card-pricing">
-                                <span className="price-card-amount">Custom</span>
-                                <span className="price-card-period">ETB one-time</span>
-                            </div>
-                            <div className="price-card-divider"></div>
-                            <p className="price-card-desc">Full implementation for hospitals and networks.</p>
-                            <ul className="price-card-features">
-                                {implementationFeatures.map((feature) => (
-                                    <li key={feature}>
-                                        <CheckIcon />
-                                        {feature}
-                                    </li>
-                                ))}
-                            </ul>
-                            <button className="price-card-btn" onClick={goToDemo}>
-                                Contact sales
                                 <ArrowIcon />
                             </button>
                         </div>
