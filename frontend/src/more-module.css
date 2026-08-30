@@ -298,8 +298,8 @@
 }
 
 .more-modules-page .bottom-nav {
-  background-color: #0a1533;
-  color: rgb(59, 59, 59);
+  background-color: #5580F4;
+  color: rgba(255, 255, 255, 0.8);
   font-weight: normal;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -307,7 +307,7 @@
 }
 
 .more-modules-page .bottom-nav span {
-  color: gray;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 13px;
 }
 
