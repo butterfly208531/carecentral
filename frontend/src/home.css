@@ -2079,7 +2079,8 @@ textarea.contact-field{
 .demo-card-info{
     position: relative;
     overflow: hidden;
-    padding: 36px 40px;
+    padding: 46px 48px 44px;
+    text-align: center;
     background: linear-gradient(150deg, #2b409c 0%, #5580F4 45%, #6f9bff 100%);
     z-index: 1;
 }
@@ -2127,7 +2128,7 @@ textarea.contact-field{
     border: none;
     border-radius: 999px;
     background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0.25));
-    margin: 0 0 14px 0;
+    margin: 0 auto 14px;
 }
 
 .demo-card-tag{
@@ -2146,26 +2147,28 @@ textarea.contact-field{
 
 .demo-card-title{
     color: white;
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 800;
     line-height: 1.25;
-    margin-top: 2px;
+    margin: 2px auto 0;
+    max-width: 720px;
     text-shadow: 0 2px 18px rgba(9, 25, 80, 0.35);
 }
 
 .demo-card-sub{
     color: rgba(255, 255, 255, 0.94);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: normal;
     line-height: 1.6;
-    margin-top: 10px;
+    margin: 10px auto 0;
+    max-width: 580px;
 }
 
 .demo-card-info .contact-line{
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 12px 18px;
-    margin-top: 18px;
+    margin-top: 20px;
 }
 
 .demo-card-info .contact-line span{
@@ -2190,16 +2193,19 @@ textarea.contact-field{
 .demo-card-stats{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-top: 20px;
+    gap: 12px;
+    margin: 24px auto 0;
+    max-width: 620px;
 }
 
 .demo-card-stats .stat-box{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 3px;
-    padding: 12px 14px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 4px;
+    padding: 16px 14px;
     background: rgba(255, 255, 255, 0.12);
     border: 1px solid rgba(255, 255, 255, 0.18);
     backdrop-filter: blur(4px);
@@ -2213,7 +2219,7 @@ textarea.contact-field{
 }
 
 .demo-card-stats .stat-box h1{
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 800;
     margin: 0;
     background: linear-gradient(180deg, #ffffff, #cfe0ff);
@@ -2224,19 +2230,33 @@ textarea.contact-field{
 }
 
 .demo-card-stats .stat-box h3{
-    font-size: 11px;
+    font-size: 11.5px;
     font-weight: normal;
     margin: 0;
     color: rgba(224, 240, 255, 0.95);
 }
 
 .demo-card-form-panel{
-    padding: 32px 36px;
+    position: relative;
+    padding: 40px 48px;
+    background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+}
+
+.demo-card-form-panel::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2b409c, #5580F4, #7a5cff);
 }
 
 .demo-card-form-panel .demo-form{
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    max-width: 560px;
+    text-align: center;
 }
 
 .demo-card-form-panel .form-row{
@@ -2244,6 +2264,7 @@ textarea.contact-field{
     margin-right: 0;
     margin-bottom: 20px;
     align-items: end;
+    text-align: left;
 }
 
 .demo-card-form-panel .form-group h4,
@@ -2253,6 +2274,8 @@ textarea.contact-field{
 
 .demo-card-form-panel .form-group input,
 .demo-card-form-panel .form-group-full textarea{
+    box-sizing: border-box;
+    width: 100%;
     padding: 13px 14px;
     border-radius: 10px;
 }
