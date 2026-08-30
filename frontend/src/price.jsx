@@ -42,27 +42,29 @@ function Price(){
 
                     <div className = "prices reveal reveal-stagger">
                         <div className = "price-card">
-                            <div className="price-card-top">
+                            <div className="price-card-head">
                                 <span className="price-card-label">SaaS Plan</span>
+                                <div className="price-card-pricing">
+                                    <span className="price-card-amount">Custom</span>
+                                    <span className="price-card-period">ETB/month</span>
+                                </div>
                             </div>
-                            <div className="price-card-pricing">
-                                <span className="price-card-amount">Custom</span>
-                                <span className="price-card-period">ETB/month</span>
+                            <div className="price-card-body">
+                                <div className="price-card-divider"></div>
+                                <p className="price-card-desc">Ideal for clinics and growing facilities.</p>
+                                <ul className="price-card-features">
+                                    {saasFeatures.map((feature) => (
+                                        <li key={feature}>
+                                            <CheckIcon />
+                                            {feature}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <button className="price-card-btn" onClick={scrollToDemo}>
+                                    Get started
+                                    <ArrowIcon />
+                                </button>
                             </div>
-                            <div className="price-card-divider"></div>
-                            <p className="price-card-desc">Ideal for clinics and growing facilities.</p>
-                            <ul className="price-card-features">
-                                {saasFeatures.map((feature) => (
-                                    <li key={feature}>
-                                        <CheckIcon />
-                                        {feature}
-                                    </li>
-                                ))}
-                            </ul>
-                            <button className="price-card-btn" onClick={scrollToDemo}>
-                                Get started
-                                <ArrowIcon />
-                            </button>
                         </div>
                     </div>
                 </div>
