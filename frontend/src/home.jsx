@@ -595,164 +595,111 @@ function Home(){
 
                 <div className="box">
                 <div className="dashboard reveal reveal-zoom reveal-delay-4">
-                    <div className="dashboard-header">
+                    <div className="dashboard-top">
+                        <span className="back-arrow">‹</span>
                         <div className="win-dots">
                             <span className="dot red"></span>
                             <span className="dot yellow"></span>
                             <span className="dot green"></span>
                         </div>
-                        <div className="dashboard-title-bar">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5580F4" strokeWidth="2"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
-                            <span>Health Management Dashboard</span>
-                        </div>
-                        <div className="dashboard-period">
-                            <span className="live-dot"></span>
-                            <span className="period-label">All Time</span>
-                        </div>
                     </div>
 
                     <div className="dashboard-body">
-                        <div className="dashboard-sidebar">
+                        <h2>Health Management Dashboard</h2>
+                        <div className="dashboard-tabs">
                             {tabs.map((tab) => (
                                 <button
                                     key={tab.label}
-                                    className={`side-nav ${activeTab === tab.label ? "active" : ""}`}
+                                    className={`tab ${activeTab === tab.label ? "active" : ""}`}
                                     onClick={() => setActiveTab(tab.label)}
                                 >
-                                    <span className="side-nav-icon">{tab.icon}</span>
+                                    {tab.label}
+                                </button>
+                            ))}
+                            <select className="time-select">
+                                <option>All Time</option>
+                            </select>
+                        </div>
+                        <div className="dashboard-tabs-second">
+                            {tabs.filter((t) => ["Dental", "Ophthalmology", "Fleet", "Fees"].includes(t.label)).map((tab) => (
+                                <button
+                                    key={tab.label}
+                                    className={`tab ${activeTab === tab.label ? "active" : ""}`}
+                                    onClick={() => setActiveTab(tab.label)}
+                                >
+                                    <span className="tab-icon">{tab.icon}</span>
                                     {tab.label}
                                 </button>
                             ))}
                         </div>
-
-                        <div className="dashboard-main">
                         <div className="stat-cards">
                             <div className="stat-card blue-edge">
-                                <div className="stat-card-info">
+                                <div>
                                     <h4>TOTAL PATIENTS</h4>
-                                    <h1>247</h1>
-                                    <span className="trend trend-up">
-                                        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 10V2M2 5l4-3 4 3"/></svg>
-                                        12%
-                                    </span>
+                                    <h1>3</h1>
                                 </div>
-                                <div className="stat-icon blue">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                                </div>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="gray" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                             </div>
                             <div className="stat-card yellow-edge">
-                                <div className="stat-card-info">
+                                <div>
                                     <h4>ADMITTED TODAY</h4>
-                                    <h1>18</h1>
-                                    <span className="trend trend-neutral">
-                                        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2"><path d="M2 6h8"/></svg>
-                                        0%
-                                    </span>
+                                    <h1>1</h1>
                                 </div>
-                                <div className="stat-icon yellow">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M2 20v-7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v7"/><path d="M2 13V7a2 2 0 0 1 2-2h6v8"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
-                                </div>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="gray" strokeWidth="2"><path d="M2 20v-7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v7"/><path d="M2 13V7a2 2 0 0 1 2-2h6v8"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
                             </div>
                             <div className="stat-card red-edge">
-                                <div className="stat-card-info">
+                                <div>
                                     <h4>APPOINTMENTS TODAY</h4>
-                                    <h1>42</h1>
-                                    <span className="trend trend-up">
-                                        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 10V2M2 5l4-3 4 3"/></svg>
-                                        8%
-                                    </span>
+                                    <h1>0</h1>
                                 </div>
-                                <div className="stat-icon red">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                                </div>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="gray" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                             </div>
                             <div className="stat-card green-edge">
-                                <div className="stat-card-info">
+                                <div>
                                     <h4>TOTAL EARNINGS</h4>
-                                    <h1>Birr 12,450</h1>
-                                    <span className="trend trend-up">
-                                        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 10V2M2 5l4-3 4 3"/></svg>
-                                        23%
-                                    </span>
+                                    <h1>Birr 0.00</h1>
                                 </div>
-                                <div className="stat-icon green">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.5c0-1-1.3-1.8-3-1.8s-3 .8-3 2 1.3 1.6 3 1.8 3 .8 3 2-1.3 2-3 2-3-.8-3-1.8"/></svg>
-                                </div>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="gray" strokeWidth="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.5c0-1-1.3-1.8-3-1.8s-3 .8-3 2 1.3 1.6 3 1.8 3 .8 3 2-1.3 2-3 2-3-.8-3-1.8"/></svg>
                             </div>
                         </div>
 
                         <div className="chart-row">
                             <div className="chart-box">
-                                <div className="chart-header">
-                                    <h3>Patient Gender Distribution</h3>
-                                </div>
-                                <div className="donut-wrapper">
-                                    <svg viewBox="0 0 100 100" className="donut-svg">
-                                        <circle cx="50" cy="50" r="40" fill="none" stroke="#f0f0f0" strokeWidth="14"/>
-                                        <path d="M 50 10 A 40 40 0 1 1 15.4 70" fill="none" stroke="#5580F4" strokeWidth="14" strokeLinecap="round"/>
-                                        <path d="M 15.4 70 A 40 40 0 0 1 50 10" fill="none" stroke="#5580F4" strokeWidth="14" strokeLinecap="round"/>
-                                    </svg>
-                                    <div className="donut-center">
-                                        <strong>247</strong>
-                                        <span>Total</span>
-                                    </div>
-                                </div>
-                                <div className="legend-row">
-                                    <div className="legend-item"><span className="legend-dot brand"></span>Male 62%</div>
-                                    <div className="legend-item"><span className="legend-dot light"></span>Female 38%</div>
+                                <h3>Patient Gender Distribution</h3>
+                                <div className="pie"></div>
+                                <div className="legend">
+                                    <span className="legend-dot purple"></span>
+                                    Male
                                 </div>
                             </div>
 
                             <div className="chart-box">
-                                <div className="chart-header">
-                                    <h3>Admissions by Department</h3>
-                                </div>
-                                <div className="bar-chart-v2">
-                                    <div className="bar-grid">
-                                        <div className="bar-grid-line"></div>
-                                        <div className="bar-grid-line"></div>
-                                        <div className="bar-grid-line"></div>
-                                        <div className="bar-grid-line"></div>
+                                <h3>Admissions by Department</h3>
+                                <div className="bar-chart">
+                                    <div className="y-axis">
+                                        <span>1.0</span><span>0.8</span><span>0.6</span><span>0.4</span><span>0.2</span>
                                     </div>
-                                    <div className="bars-container">
-                                        <div className="bar-col"><div className="bar-v" style={{height: '75%'}}></div><span>OPD</span></div>
-                                        <div className="bar-col"><div className="bar-v accent" style={{height: '55%'}}></div><span>ICU</span></div>
-                                        <div className="bar-col"><div className="bar-v" style={{height: '85%'}}></div><span>Lab</span></div>
-                                        <div className="bar-col"><div className="bar-v accent" style={{height: '40%'}}></div><span>ER</span></div>
-                                        <div className="bar-col"><div className="bar-v" style={{height: '65%'}}></div><span>Pharm</span></div>
+                                    <div className="bar-area">
+                                        <div className="bar"></div>
                                     </div>
                                 </div>
+                                <div className="x-axis-single">Eye</div>
                             </div>
 
                             <div className="chart-box">
-                                <div className="chart-header">
-                                    <h3>Appointments (Last 6 Months)</h3>
-                                    <span className="chart-badge">+18%</span>
-                                </div>
-                                <div className="line-chart-v2">
-                                    <svg viewBox="0 0 300 100" className="line-svg" preserveAspectRatio="none">
-                                        <defs>
-                                            <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
-                                                <stop offset="0%" stopColor="#5580F4" stopOpacity="0.25"/>
-                                                <stop offset="100%" stopColor="#5580F4" stopOpacity="0"/>
-                                            </linearGradient>
-                                        </defs>
-                                        <line x1="0" y1="25" x2="300" y2="25" stroke="#f0f0f0" strokeWidth="0.5"/>
-                                        <line x1="0" y1="50" x2="300" y2="50" stroke="#f0f0f0" strokeWidth="0.5"/>
-                                        <line x1="0" y1="75" x2="300" y2="75" stroke="#f0f0f0" strokeWidth="0.5"/>
-                                        <path d="M 0 65 L 60 45 L 120 55 L 180 28 L 240 38 L 300 18 L 300 100 L 0 100 Z" fill="url(#areaGrad)"/>
-                                        <path d="M 0 65 L 60 45 L 120 55 L 180 28 L 240 38 L 300 18" fill="none" stroke="#5580F4" strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round"/>
-                                        <circle cx="0" cy="65" r="4" fill="#5580F4"/><circle cx="60" cy="45" r="4" fill="#5580F4"/>
-                                        <circle cx="120" cy="55" r="4" fill="#5580F4"/><circle cx="180" cy="28" r="4" fill="#5580F4"/>
-                                        <circle cx="240" cy="38" r="4" fill="#5580F4"/><circle cx="300" cy="18" r="4" fill="#5580F4"/>
-                                        <circle cx="180" cy="28" r="6" fill="white" stroke="#5580F4" strokeWidth="2"/>
-                                    </svg>
+                                <h3>Appointments (Last 6 Months)</h3>
+                                <div className="line-chart">
+                                    <div className="y-axis">
+                                        <span>1.0</span><span>0.8</span><span>0.6</span><span>0.4</span><span>0.2</span>
+                                    </div>
+                                    <div className="line-area">
+                                        <div className="flat-line"></div>
+                                    </div>
                                 </div>
                                 <div className="x-axis-months">
                                     <span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span>
                                 </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>
